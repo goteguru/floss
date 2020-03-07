@@ -1,0 +1,501 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+- \\hideFromPandoc{	config.md	/^#        - \\hideFromPandoc{$/;"	c
+- \\newcommand{\\hideFromPandoc}[1]{#1}	config.md	/^#        - \\newcommand{\\hideFromPandoc}[1]{#1}$/;"	c
+- \\newcommand{\\sectionbreak}{\\clearpage}	config.md	/^#        - \\newcommand{\\sectionbreak}{\\clearpage}$/;"	c
+- \\newenvironment{rotatepage}	config.md	/^#        - \\newenvironment{rotatepage}$/;"	c
+- \\setcounter{chapter}{-1}	config.md	/^#        - \\setcounter{chapter}{-1}$/;"	c
+- \\usepackage{titlesec}	config.md	/^#        - \\usepackage{titlesec}$/;"	c
+<C-Space>	Session.vim	/^inoremap <C-Space> $/;"	m
+<Down>	Session.vim	/^inoremap <expr> <Down> pumvisible() ? "\\" : "\\<Down>"$/;"	m
+<F2>	Session.vim	/^map <F2> :w$/;"	m
+<NL>	Session.vim	/^imap <NL> <Plug>IMAP_JumpForward$/;"	m
+<NL>	Session.vim	/^nmap <NL> <Plug>IMAP_JumpForward$/;"	m
+<NL>	Session.vim	/^vmap <NL> <Plug>IMAP_JumpForward$/;"	m
+<Plug>(pandoc-hypertext-goto-id)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-hypertext-goto-id) :call pandoc#hypertext#GotoID()$/;"	m
+<Plug>(pandoc-hypertext-open-local)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-hypertext-open-local) :call pandoc#hypertext#OpenLoca/;"	m
+<Plug>(pandoc-hypertext-open-system)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-hypertext-open-system) :call pandoc#hypertext#OpenSys/;"	m
+<Plug>(pandoc-keyboard-apply-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-apply-header) :call pandoc#keyboard#sections#/;"	m
+<Plug>(pandoc-keyboard-cur-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-cur-header) :call pandoc#keyboard#sections#Curr/;"	m
+<Plug>(pandoc-keyboard-cur-header-parent)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-cur-header-parent) :call pandoc#keyboard#sectio/;"	m
+<Plug>(pandoc-keyboard-cur-li)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-cur-li) :call pandoc#keyboard#lists#CurrentList/;"	m
+<Plug>(pandoc-keyboard-cur-li-parent)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-cur-li-parent) :call pandoc#keyboard#lists#Curr/;"	m
+<Plug>(pandoc-keyboard-ff-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-ff-header) :call pandoc#keyboard#sections#For/;"	m
+<Plug>(pandoc-keyboard-ff-sect-end)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-ff-sect-end) :call pandoc#keyboard#sections#N/;"	m
+<Plug>(pandoc-keyboard-first-header-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-first-header-child) :call pandoc#keyboard#secti/;"	m
+<Plug>(pandoc-keyboard-first-li-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-first-li-child) :call pandoc#keyboard#lists#Fir/;"	m
+<Plug>(pandoc-keyboard-last-header-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-last-header-child) :call pandoc#keyboard#sectio/;"	m
+<Plug>(pandoc-keyboard-last-li-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-last-li-child) :call pandoc#keyboard#lists#Last/;"	m
+<Plug>(pandoc-keyboard-links-back)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-links-back) :call pandoc#hypertext#BackFromLink/;"	m
+<Plug>(pandoc-keyboard-links-file-back)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-links-file-back) :call pandoc#hypertext#BackFro/;"	m
+<Plug>(pandoc-keyboard-links-open)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-links-open) :call pandoc#hypertext#OpenLink( g:/;"	m
+<Plug>(pandoc-keyboard-links-split)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-links-split) :call pandoc#hypertext#OpenLink( g/;"	m
+<Plug>(pandoc-keyboard-next-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-next-header) :call pandoc#keyboard#sections#Nex/;"	m
+<Plug>(pandoc-keyboard-next-header-sibling)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-next-header-sibling) :call pandoc#keyboard#sect/;"	m
+<Plug>(pandoc-keyboard-next-li)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-next-li) :call pandoc#keyboard#lists#NextListIt/;"	m
+<Plug>(pandoc-keyboard-next-li-sibling)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-next-li-sibling) :call pandoc#keyboard#lists#Ne/;"	m
+<Plug>(pandoc-keyboard-nth-header-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-nth-header-child) :call pandoc#keyboard#secti/;"	m
+<Plug>(pandoc-keyboard-nth-li-child)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-nth-li-child) :call pandoc#keyboard#lists#Got/;"	m
+<Plug>(pandoc-keyboard-prev-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-prev-header) :call pandoc#keyboard#sections#Pre/;"	m
+<Plug>(pandoc-keyboard-prev-header-sibling)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-prev-header-sibling) :call pandoc#keyboard#sect/;"	m
+<Plug>(pandoc-keyboard-prev-li)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-prev-li) :call pandoc#keyboard#lists#PrevListIt/;"	m
+<Plug>(pandoc-keyboard-prev-li-sibling)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-prev-li-sibling) :call pandoc#keyboard#lists#Pr/;"	m
+<Plug>(pandoc-keyboard-ref-backfrom)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-ref-backfrom) :call pandoc#keyboard#references#/;"	m
+<Plug>(pandoc-keyboard-ref-goto)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-ref-goto) :call pandoc#keyboard#references#GOTO/;"	m
+<Plug>(pandoc-keyboard-ref-insert)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-ref-insert) :call pandoc#keyboard#references#In/;"	m
+<Plug>(pandoc-keyboard-remove-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-remove-header) :call pandoc#keyboard#sections#R/;"	m
+<Plug>(pandoc-keyboard-rw-header)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-rw-header) :call pandoc#keyboard#sections#Bac/;"	m
+<Plug>(pandoc-keyboard-rw-sect-end)	Session.vim	/^noremap <buffer> <silent> <Plug>(pandoc-keyboard-rw-sect-end) :call pandoc#keyboard#sections#P/;"	m
+<Plug>(pandoc-keyboard-select-emphasis-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-emphasis-exclusive) :call pandoc#keyb/;"	m
+<Plug>(pandoc-keyboard-select-emphasis-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-emphasis-inclusive) :call pandoc#keyb/;"	m
+<Plug>(pandoc-keyboard-select-section-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-section-exclusive) :call pandoc#keybo/;"	m
+<Plug>(pandoc-keyboard-select-section-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-section-inclusive) :call pandoc#keybo/;"	m
+<Plug>(pandoc-keyboard-select-strikeout-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-strikeout-exclusive) :call pandoc#key/;"	m
+<Plug>(pandoc-keyboard-select-strikeout-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-strikeout-inclusive) :call pandoc#key/;"	m
+<Plug>(pandoc-keyboard-select-strong-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-strong-exclusive) :call pandoc#keyboa/;"	m
+<Plug>(pandoc-keyboard-select-strong-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-strong-inclusive) :call pandoc#keyboa/;"	m
+<Plug>(pandoc-keyboard-select-subscript-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-subscript-exclusive) :call pandoc#key/;"	m
+<Plug>(pandoc-keyboard-select-subscript-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-subscript-inclusive) :call pandoc#key/;"	m
+<Plug>(pandoc-keyboard-select-superscript-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-superscript-exclusive) :call pandoc#k/;"	m
+<Plug>(pandoc-keyboard-select-superscript-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-superscript-inclusive) :call pandoc#k/;"	m
+<Plug>(pandoc-keyboard-select-verbatim-exclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-verbatim-exclusive) :call pandoc#keyb/;"	m
+<Plug>(pandoc-keyboard-select-verbatim-inclusive)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-select-verbatim-inclusive) :call pandoc#keyb/;"	m
+<Plug>(pandoc-keyboard-toggle-emphasis)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-emphasis) :set opfunc=pandoc#keyboard#s/;"	m
+<Plug>(pandoc-keyboard-toggle-emphasis)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-emphasis) :set opfunc=pandoc#keyboard#s/;"	m
+<Plug>(pandoc-keyboard-toggle-emphasis)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-emphasis) :call pandoc#keyboard#style/;"	m
+<Plug>(pandoc-keyboard-toggle-strikeout)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strikeout) :set opfunc=pandoc#keyboard#/;"	m
+<Plug>(pandoc-keyboard-toggle-strikeout)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strikeout) :set opfunc=pandoc#keyboard#/;"	m
+<Plug>(pandoc-keyboard-toggle-strikeout)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strikeout) :call pandoc#keyboard#styl/;"	m
+<Plug>(pandoc-keyboard-toggle-strong)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strong) :set opfunc=pandoc#keyboard#sty/;"	m
+<Plug>(pandoc-keyboard-toggle-strong)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strong) :set opfunc=pandoc#keyboard#sty/;"	m
+<Plug>(pandoc-keyboard-toggle-strong)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-strong) :call pandoc#keyboard#styles#/;"	m
+<Plug>(pandoc-keyboard-toggle-subscript)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-subscript) :set opfunc=pandoc#keyboard#/;"	m
+<Plug>(pandoc-keyboard-toggle-subscript)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-subscript) :set opfunc=pandoc#keyboard#/;"	m
+<Plug>(pandoc-keyboard-toggle-subscript)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-subscript) :call pandoc#keyboard#styl/;"	m
+<Plug>(pandoc-keyboard-toggle-superscript)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-superscript) :set opfunc=pandoc#keyboar/;"	m
+<Plug>(pandoc-keyboard-toggle-superscript)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-superscript) :set opfunc=pandoc#keyboar/;"	m
+<Plug>(pandoc-keyboard-toggle-superscript)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-superscript) :call pandoc#keyboard#st/;"	m
+<Plug>(pandoc-keyboard-toggle-verbatim)	Session.vim	/^nnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-verbatim) :set opfunc=pandoc#keyboard#s/;"	m
+<Plug>(pandoc-keyboard-toggle-verbatim)	Session.vim	/^onoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-verbatim) :set opfunc=pandoc#keyboard#s/;"	m
+<Plug>(pandoc-keyboard-toggle-verbatim)	Session.vim	/^vnoremap <buffer> <silent> <Plug>(pandoc-keyboard-toggle-verbatim) :call pandoc#keyboard#style/;"	m
+<Plug>IMAP_DeleteAndJumpBack	Session.vim	/^vmap <silent> <Plug>IMAP_DeleteAndJumpBack "_<Del>i=IMAP_Jumpfunc('b', 0)$/;"	m
+<Plug>IMAP_DeleteAndJumpForward	Session.vim	/^vmap <silent> <Plug>IMAP_DeleteAndJumpForward "_<Del>i=IMAP_Jumpfunc('', 0)$/;"	m
+<Plug>IMAP_JumpBack	Session.vim	/^imap <silent> <Plug>IMAP_JumpBack =IMAP_Jumpfunc('b', 0)$/;"	m
+<Plug>IMAP_JumpBack	Session.vim	/^nmap <silent> <Plug>IMAP_JumpBack i=IMAP_Jumpfunc('b', 0)$/;"	m
+<Plug>IMAP_JumpBack	Session.vim	/^vmap <silent> <Plug>IMAP_JumpBack `<i=IMAP_Jumpfunc('b', 0)$/;"	m
+<Plug>IMAP_JumpForward	Session.vim	/^imap <silent> <Plug>IMAP_JumpForward =IMAP_Jumpfunc('', 0)$/;"	m
+<Plug>IMAP_JumpForward	Session.vim	/^nmap <silent> <Plug>IMAP_JumpForward i=IMAP_Jumpfunc('', 0)$/;"	m
+<Plug>IMAP_JumpForward	Session.vim	/^vmap <silent> <Plug>IMAP_JumpForward i=IMAP_Jumpfunc('', 0)$/;"	m
+<Plug>NetrwBrowseX	Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_g/;"	m
+<Plug>NetrwBrowseXVis	Session.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
+<Plug>SurroundRepeat	Session.vim	/^nnoremap <silent> <Plug>SurroundRepeat .$/;"	m
+<S-Insert>	Session.vim	/^map! <S-Insert> *$/;"	m
+<S-Tab>	Session.vim	/^inoremap <expr> <S-Tab> pumvisible() ? "\\" : "\\<S-Tab>"$/;"	m
+<Up>	Session.vim	/^inoremap <expr> <Up> pumvisible() ? "\\" : "\\<Up>"$/;"	m
+A nyílt modell hatáspontjai{#sec:FLOSSHP}	F1_Keretek/04_FOSS_Hatáspontok.md	/^## A nyílt modell hatáspontjai{#sec:FLOSSHP}$/;"	s
+Adatbiztonság (PR.DS)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Adatbiztonság (PR.DS)$/;"	S
+Alacsony hibaszám, jobb kódminőség (FS-J-H)	F2_FOSS_Sajátosságok/J_Termék.md	/^### Alacsony hibaszám, jobb kódminőség (FS-J-H)$/;"	S
+Alacsony hibaszám, jobb kódminőség (FS-J-H)	értekezés.tex	/^\\subsubsection{Alacsony hibaszám, jobb kódminőség$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Alkalmazott kutatási módszerek	Bevezetés/4.Módszertan.md	/^### Alkalmazott kutatási módszerek$/;"	S
+Alkalmazott protokoll	F1_Keretek/01_Systematic_mapping_study.md	/^### Alkalmazott protokoll$/;"	S
+Analízis (RS.AN)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Analízis (RS.AN)$/;"	S
+Az értekezés felépítése, jelölésrendszere	Bevezetés/5.Az_értekezés_felépítése.md	/^### Az értekezés felépítése, jelölésrendszere$/;"	S
+Azonosított javaslatok	értekezés.tex	/^\\subsubsection*{Azonosított$/;"	b	subsection:FLOSS Taxonomia""Belső szabályozás (FS-SZ-B)
+Azonosítás (ID)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^## Azonosítás (ID)$/;"	s
+Azonosítás és hitelesítés, hozzáférés védelem (PR.AC)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Azonosítás és hitelesítés, hozzáférés védelem (PR.AC)$/;"	S
+Belső szabályozás (FS-SZ-B)	értekezés.tex	/^\\subsection{Belső szabályozás (FS-SZ-B)}\\label{FS-SZ-B}}$/;"	u	section:FLOSS Taxonomia
+Belső szabályozás (FS-SZ-B) {#sec:FS-SZ-B}	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^### Belső szabályozás (FS-SZ-B) {#sec:FS-SZ-B}$/;"	S
+Belső érvényesség	Összefoglalás/03_Korlátok_és_lehetőségek.md	/^### Belső érvényesség$/;"	S
+Beszállítói lánc kockázatkezelése (ID.SC)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Beszállítói lánc kockázatkezelése (ID.SC)$/;"	S
+Bevezetés	értekezés.tex	/^\\section{Bevezetés}\\label{bevezetuxe9s}}$/;"	s
+Bevezetés{-}	Bevezetés/0.bevezetés.md	/^Bevezetés{-}$/;"	c
+Dinamikusan generált adatok:	README.md	/^Dinamikusan generált adatok:$/;"	s
+Dokumentációs tér, architektúra és API dokumentáció (FS-M-A)	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^### Dokumentációs tér, architektúra és API dokumentáció (FS-M-A)$/;"	S
+Dokumentációs tér, architektúra és API dokumentáció (FS-M-A)	értekezés.tex	/^\\subsubsection{Dokumentációs tér, architektúra és API dokumentáció$/;"	b	subsection:FLOSS Taxonomia""Metaadatok (FS-M)
+Döntéshozatal, irányítás, befolyás	F2_FOSS_Sajátosságok/K_Közösség.md	/^#### Döntéshozatal, irányítás, befolyás$/;"	t
+Döntéshozatal, irányítás, befolyás	értekezés.tex	/^\\paragraph{Döntéshozatal, irányítás,$/;"	P	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Egyedi igényekhez alakíthatóság, testreszabás (FS-H-T)	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Egyedi igényekhez alakíthatóság, testreszabás (FS-H-T)$/;"	S
+Egyedi igényekhez alakíthatóság, testreszabás (FS-H-T)	értekezés.tex	/^\\subsubsection{Egyedi igényekhez alakíthatóság, testreszabás$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Egyeztetési tér, a fejlesztői kommunikáció vizsgálata (FS-M-K)	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^### Egyeztetési tér, a fejlesztői kommunikáció vizsgálata (FS-M-K)$/;"	S
+Egyeztetési tér, a fejlesztői kommunikáció vizsgálata (FS-M-K)	értekezés.tex	/^\\subsubsection{Egyeztetési tér, a fejlesztői kommunikáció vizsgálata$/;"	b	subsection:FLOSS Taxonomia""Metaadatok (FS-M)
+Egyszerű hozzáférhetőség (FS-T-E)	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Egyszerű hozzáférhetőség (FS-T-E)$/;"	S
+Egyszerű hozzáférhetőség (FS-T-E)	értekezés.tex	/^\\subsubsection{Egyszerű hozzáférhetőség$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Ellenintézkedések	F3_FOSS_Biztonsági_Hatásai/0.Ellenintézkedések.md	/^Ellenintézkedések$/;"	c
+Eredmények	F1_Keretek/01_Systematic_mapping_study.md	/^### Eredmények$/;"	S
+Események és eltérések (DE.AE)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Események és eltérések (DE.AE)$/;"	S
+Eszközhasználat (FS-F-E)	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Eszközhasználat (FS-F-E)$/;"	S
+Eszközhasználat (FS-F-E)	értekezés.tex	/^\\subsubsection{Eszközhasználat$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Eszközkezelés (ID.AM)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Eszközkezelés (ID.AM)$/;"	S
+FLOSS Sajátosságok{#sec:MASODIK}	F2_FOSS_Sajátosságok/00.md	/^FLOSS Sajátosságok{#sec:MASODIK}$/;"	c
+FLOSS Taxonomia	értekezés.tex	/^\\section{FLOSS Taxonomia}\\label{floss-taxonomia}}$/;"	s
+FLOSS mint termék, terméktulajdonságok (FS-J)	F2_FOSS_Sajátosságok/J_Termék.md	/^FLOSS mint termék, terméktulajdonságok (FS-J)$/;"	s
+FLOSS mint termék, terméktulajdonságok (FS-J)	értekezés.tex	/^\\subsection{FLOSS mint termék, terméktulajdonságok$/;"	u	section:FLOSS Taxonomia
+FS-SZ	értekezés.tex	/^\\subsection{Szabályozás, megfelelőség (FS-Sz)}\\label{FS-SZ}}$/;"	l
+FS-SZ-B	értekezés.tex	/^\\subsection{Belső szabályozás (FS-SZ-B)}\\label{FS-SZ-B}}$/;"	l
+FS-SZ-K	értekezés.tex	/^\\subsubsection{Kormányzati szabályozás (FS-SZ-K)}\\label{FS-SZ-K}}$/;"	l
+FS-SZ-L	értekezés.tex	/^\\subsubsection{Összetett licencelés (FS-SZ-L)}\\label{FS-SZ-L}}$/;"	l
+FS-SZ-T	értekezés.tex	/^\\subsubsection{Tanúsítványok hiánya (FS-SZ-T)}\\label{FS-SZ-T}}$/;"	l
+Fejlesztési folyamatok	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^Fejlesztési folyamatok$/;"	s
+Fejlesztési folyamatok	értekezés.tex	/^\\subsection{Fejlesztési folyamatok}\\label{fejlesztuxe9si-folyamatok}}$/;"	u	section:FLOSS Taxonomia
+Fejlesztői felhasználás, integráció (FS-H-I)	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Fejlesztői felhasználás, integráció (FS-H-I)$/;"	S
+Fejlesztői felhasználás, integráció (FS-H-I)	értekezés.tex	/^\\subsubsection{Fejlesztői felhasználás, integráció$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Fejlesztőközösség felépítése	F2_FOSS_Sajátosságok/K_Közösség.md	/^#### Fejlesztőközösség felépítése$/;"	t
+Fejlesztőközösség felépítése	értekezés.tex	/^\\paragraph{Fejlesztőközösség$/;"	P	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Felderítés (DE)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^## Felderítés (DE)$/;"	s
+Felderítési folyamatok (DE.DP)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Felderítési folyamatok (DE.DP)$/;"	S
+Felhasználás	értekezés.tex	/^\\subsection{Felhasználás}\\label{felhasznuxe1luxe1s}}$/;"	u	section:FLOSS Taxonomia
+Felhasználás{#sec:Usage}	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^Felhasználás{#sec:Usage}$/;"	s
+Felhasználói dokumentáció (FS-J-D)	F2_FOSS_Sajátosságok/J_Termék.md	/^### Felhasználói dokumentáció (FS-J-D)$/;"	S
+Felhasználói dokumentáció (FS-J-D)	értekezés.tex	/^\\subsubsection{Felhasználói dokumentáció$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Felhasználói tábor	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Felhasználói tábor$/;"	S
+Felhasználói tábor	értekezés.tex	/^\\subsubsection{Felhasználói tábor}\\label{felhasznuxe1luxf3i-tuxe1bor}}$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Folyamatos biztonság felügyelet (DE.CM)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Folyamatos biztonság felügyelet (DE.CM)$/;"	S
+Frissítések, kiadási ütemezés (FS-T-K)	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Frissítések, kiadási ütemezés (FS-T-K)$/;"	S
+Frissítések, kiadási ütemezés (FS-T-K)	értekezés.tex	/^\\subsubsection{Frissítések, kiadási ütemezés$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Gazdasági hatás (FS-G-G)	F2_FOSS_Sajátosságok/G_Gazdaság_és_társadalom.md	/^### Gazdasági hatás (FS-G-G)$/;"	S
+Gazdasági hatás (FS-G-G)	értekezés.tex	/^\\subsubsection{Gazdasági hatás$/;"	b	subsection:FLOSS Taxonomia""Gazdasági és társadalmi hatás
+Gazdasági és társadalmi hatás	F2_FOSS_Sajátosságok/G_Gazdaság_és_társadalom.md	/^Gazdasági és társadalmi hatás$/;"	s
+Gazdasági és társadalmi hatás	értekezés.tex	/^\\subsection{Gazdasági és társadalmi$/;"	u	section:FLOSS Taxonomia
+Gyártófüggetlenség (FS-H-Gy)	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Gyártófüggetlenség (FS-H-Gy)$/;"	S
+Gyártófüggetlenség (FS-H-Gy)	értekezés.tex	/^\\subsubsection{Gyártófüggetlenség$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Harmonizáció    jobb harmonizációs lehetőségek az együttműködés terén	F2_FOSS_Sajátosságok/J_Termék.md	/^Harmonizáció    jobb harmonizációs lehetőségek az együttműködés terén$/;"	s
+Használhatóság, hordozhatóság, funkcionalitás (FS-J-H)	F2_FOSS_Sajátosságok/J_Termék.md	/^### Használhatóság, hordozhatóság, funkcionalitás (FS-J-H)$/;"	S
+Használhatóság, hordozhatóság, funkcionalitás (FS-J-H)	értekezés.tex	/^\\subsubsection{Használhatóság, hordozhatóság, funkcionalitás$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Helyreállítás (RC)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^## Helyreállítás (RC)$/;"	s
+Helyreállítás tervezés (RC.RP)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Helyreállítás tervezés (RC.RP)$/;"	S
+Hivatkozások{-}	Összefoglalás/99_Felhasznált_technológiák.md	/^Hivatkozások{-}$/;"	c
+Implementációs tér, a forráskód elemzése (FS-M-I)	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^### Implementációs tér, a forráskód elemzése (FS-M-I)$/;"	S
+Implementációs tér, a forráskód elemzése (FS-M-I)	értekezés.tex	/^\\subsubsection{Implementációs tér, a forráskód elemzése$/;"	b	subsection:FLOSS Taxonomia""Metaadatok (FS-M)
+Információ védelemi folyamatok és műveletek (PR.IP)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Információ védelemi folyamatok és műveletek (PR.IP)$/;"	S
+Interoperabilitás, kompatibilitás, szabványkövetés (FS-J-K)	F2_FOSS_Sajátosságok/J_Termék.md	/^### Interoperabilitás, kompatibilitás, szabványkövetés (FS-J-K)$/;"	S
+Interoperabilitás, kompatibilitás, szabványkövetés (FS-J-K)	értekezés.tex	/^\\subsubsection{Interoperabilitás, kompatibilitás, szabványkövetés$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Irodalomkutatás	F1_Keretek/01_Systematic_mapping_study.md	/^Irodalomkutatás$/;"	s
+Jellemző piaci szegmensek	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Jellemző piaci szegmensek$/;"	S
+Jellemző piaci szegmensek	értekezés.tex	/^\\subsubsection{Jellemző piaci$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Karbantartás (PR.MA)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Karbantartás (PR.MA)$/;"	S
+Karbantartói tér, hibajegyek, hibakommunikáció (FS-M-H)	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^### Karbantartói tér, hibajegyek, hibakommunikáció (FS-M-H)$/;"	S
+Karbantartói tér, hibajegyek, hibakommunikáció (FS-M-H)	értekezés.tex	/^\\subsubsection{Karbantartói tér, hibajegyek, hibakommunikáció$/;"	b	subsection:FLOSS Taxonomia""Metaadatok (FS-M)
+Keresési stratégia	F1_Keretek/01_Systematic_mapping_study.md	/^### Keresési stratégia$/;"	S
+Kivitelezési szakasz (FS-F-V)	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Kivitelezési szakasz (FS-F-V)$/;"	S
+Kivitelezési szakasz (FS-F-V)	értekezés.tex	/^\\subsubsection{Kivitelezési szakasz$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Kizáró okok	Összefoglalás/01_Következtetések.md	/^### Kizáró okok$/;"	S
+Kockázatfelmérés (ID.RA)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Kockázatfelmérés (ID.RA)$/;"	S
+Kockázatkezelési stratégia (ID.RM)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Kockázatkezelési stratégia (ID.RM)$/;"	S
+Kommunikáció (RS.CO)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Kommunikáció (RS.CO)$/;"	S
+Koncepcionális keretrendszer	Bevezetés/4.Módszertan.md	/^### Koncepcionális keretrendszer$/;"	S
+Kormányzati szabályozás (FS-SZ-K)	értekezés.tex	/^\\subsubsection{Kormányzati szabályozás (FS-SZ-K)}\\label{FS-SZ-K}}$/;"	b	subsection:FLOSS Taxonomia""Belső szabályozás (FS-SZ-B)
+Kormányzati szabályozás (FS-SZ-K) {#sec:FS-SZ-K}	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^### Kormányzati szabályozás (FS-SZ-K) {#sec:FS-SZ-K}$/;"	S
+Kormányzás (ID.GV)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Kormányzás (ID.GV)$/;"	S
+Korábbi művek	Bevezetés/6.korábbi-művek.md	/^## Korábbi művek$/;"	s
+Kutatás időszerűsége	értekezés.tex	/^\\subsection{Kutatás$/;"	u	section:Bevezetés
+Kutatás korlátai	Összefoglalás/03_Korlátok_és_lehetőségek.md	/^## Kutatás korlátai$/;"	s
+Kutatás tárgya és irodalma	F1_Keretek/00_cim.md	/^Kutatás tárgya és irodalma$/;"	c
+Kutatási cél	F1_Keretek/01_Systematic_mapping_study.md	/^### Kutatási cél$/;"	S
+Kutatási célkitűzések	értekezés.tex	/^\\subsection{Kutatási$/;"	u	section:Bevezetés
+Kutatási hipotézisek	Bevezetés/3.Hipotézisek.md	/^Kutatási hipotézisek$/;"	s
+Kutatási hipotézisek	értekezés.tex	/^\\subsection{Kutatási hipotézisek}\\label{kutatuxe1si-hipotuxe9zisek}}$/;"	u	section:Bevezetés
+Kutatási kérdések	Bevezetés/4.Módszertan.md	/^### Kutatási kérdések$/;"	S
+Kutatási módszerek	értekezés.tex	/^\\subsection{Kutatási módszerek}\\label{kutatuxe1si-muxf3dszerek}}$/;"	u	section:Bevezetés
+Kutatási módszer{#sec:ResearchMethod}	Bevezetés/4.Módszertan.md	/^Kutatási módszer{#sec:ResearchMethod}$/;"	s
+Követelmények meghatározásának eltérései (FS-F-K)	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Követelmények meghatározásának eltérései (FS-F-K)$/;"	S
+Követelmények meghatározásának eltérései (FS-F-K)	értekezés.tex	/^\\subsubsection{Követelmények meghatározásának eltérései$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Közösség, szubkultúra (FS-K)	F2_FOSS_Sajátosságok/K_Közösség.md	/^Közösség, szubkultúra (FS-K)$/;"	s
+Közösség, szubkultúra (FS-K)	értekezés.tex	/^\\subsection{Közösség, szubkultúra$/;"	u	section:FLOSS Taxonomia
+Külső érvényesség	Összefoglalás/03_Korlátok_és_lehetőségek.md	/^### Külső érvényesség$/;"	S
+LRE, LIRE és FLOSS kapcsolata	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^### LRE, LIRE és FLOSS kapcsolata$/;"	S
+Lehetséges alkalmazási területek	Összefoglalás/03_Korlátok_és_lehetőségek.md	/^## Lehetséges alkalmazási területek$/;"	s
+Lobbitevékenység hiánya (FS-T-L)	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Lobbitevékenység hiánya (FS-T-L)$/;"	S
+Lobbitevékenység hiánya (FS-T-L)	értekezés.tex	/^\\subsubsection{Lobbitevékenység hiánya$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Léfontosságú Információs Rendszerelemek{#sec:LIRE}	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^### Léfontosságú Információs Rendszerelemek{#sec:LIRE}$/;"	S
+Létfontosságú Rendszerelemek (Kritikus Infrastruktúrák)	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^### Létfontosságú Rendszerelemek (Kritikus Infrastruktúrák)$/;"	S
+Létfontosságú Rendszerelemek és Információs Rendszerelemek	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^Létfontosságú Rendszerelemek és Információs Rendszerelemek$/;"	s
+Létfontosságú rendszerelemek fejlődése	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^#### Létfontosságú rendszerelemek fejlődése $/;"	t
+Magyarországi tevékenységek	F1_Keretek/02_Létfontosságú_Információs_Rendszerelemek.md	/^#### Magyarországi tevékenységek$/;"	t
+Metaadatok (FS-M)	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^Metaadatok (FS-M)$/;"	s
+Metaadatok (FS-M)	értekezés.tex	/^\\subsection{Metaadatok (FS-M)}\\label{metaadatok-fs-m}}$/;"	u	section:FLOSS Taxonomia
+Migráció (FS-H-M)	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Migráció (FS-H-M)$/;"	S
+Migráció (FS-H-M)	értekezés.tex	/^\\subsubsection{Migráció (FS-H-M)}\\label{migruxe1ciuxf3-fs-h-m}}$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Minőségbiztosítás (FS-F-M)	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Minőségbiztosítás (FS-F-M)$/;"	S
+Minőségbiztosítás (FS-F-M)	értekezés.tex	/^\\subsubsection{Minőségbiztosítás$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Mérséklés (RS.MI)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Mérséklés (RS.MI)$/;"	S
+Nehézségek	Összefoglalás/01_Következtetések.md	/^### Nehézségek $/;"	S
+Nyílt Fejlesztési Modell fajtái	F1_Keretek/03_FOSS_értelmezése.md	/^### Nyílt Fejlesztési Modell fajtái$/;"	S
+Nyílt forrás biztonsági hatásai	értekezés.tex	/^\\subsubsection{Nyílt forrás biztonsági$/;"	b	subsection:Bevezetés""Kutatási módszerek
+Nyílt forrás felhasználási kategóriák	open_source_usage_categories.md	/^Nyílt forrás felhasználási kategóriák$/;"	s
+Nyílt forráskód értelmezése{#sec:WhatIsFLOSS}	F1_Keretek/03_FOSS_értelmezése.md	/^Nyílt forráskód értelmezése{#sec:WhatIsFLOSS}$/;"	s
+Osztályozási séma	F1_Keretek/01_Systematic_mapping_study.md	/^### Osztályozási séma$/;"	S
+Problémafelvetés, célkitűzések {#sec:CELKITUZESEK}	Bevezetés/2.Kutatási_célok.md	/^Problémafelvetés, célkitűzések {#sec:CELKITUZESEK}$/;"	s
+Programme	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^                                                                       Programme                /;"	s
+Q	Session.vim	/^map Q gq$/;"	m
+Roadmap hiánya                  a szervezet nehezen látja át a stratégiai irányt, ez sokszor teljesen hiányzik is	F2_FOSS_Sajátosságok/J_Termék.md	/^Roadmap hiánya                  a szervezet nehezen látja át a stratégiai irányt, ez sokszo/;"	s
+Részkövetkeztetések	F1_Keretek/05_Részkövetkeztetések.md	/^Részkövetkeztetések$/;"	s
+Részkövetkeztetések	F2_FOSS_Sajátosságok/X05_Részkövetkeztetések.md	/^Részkövetkeztetések$/;"	s
+Részkövetkeztetések	F3_FOSS_Biztonsági_Hatásai/9.Részkövetkezetések.md	/^Részkövetkeztetések$/;"	s
+Résztvevők	F2_FOSS_Sajátosságok/K_Közösség.md	/^### Résztvevők$/;"	S
+Résztvevők	értekezés.tex	/^\\subsubsection{Résztvevők}\\label{ruxe9sztvevux151k}}$/;"	b	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Rövidítések jegyzéke{-}	Összefoglalás/98_Rövidítések_jegyzéke.md	/^# Rövidítések jegyzéke{-}$/;"	c
+S	Session.vim	/^xmap S <Plug>VSurround$/;"	m
+SQL	bin/gen_F2	/^>$TARGET_DIR\/${code}_XTables.md sqlite3 $FLOSS_DB <<SQL$/;"	h
+SecPol	bin/szabvanyok.py	/^SecPol = {'ID.AM-1': ['CIS CSC 1', 'COBIT 5 BAI09.01, BAI09.02', 'ISA 62443-2-1:2009 4.2.3.4', '/;"	v
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
+Szabad Szoftver	F1_Keretek/03_FOSS_értelmezése.md	/^### Szabad Szoftver$/;"	S
+Szabályozás, megfelelőség (FS-Sz)	értekezés.tex	/^\\subsection{Szabályozás, megfelelőség (FS-Sz)}\\label{FS-SZ}}$/;"	u	section:FLOSS Taxonomia
+Szabályozás, megfelelőség (FS-Sz) {#sec:FS-SZ}	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^Szabályozás, megfelelőség (FS-Sz) {#sec:FS-SZ}$/;"	s
+Szervezet (FS-K-Sz)	F2_FOSS_Sajátosságok/K_Közösség.md	/^### Szervezet (FS-K-Sz)$/;"	S
+Szervezet (FS-K-Sz)	értekezés.tex	/^\\subsubsection{Szervezet (FS-K-Sz)}\\label{szervezet-fs-k-sz}}$/;"	b	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Szociális struktúra	F2_FOSS_Sajátosságok/K_Közösség.md	/^#### Szociális struktúra$/;"	t
+Szociális struktúra	értekezés.tex	/^\\paragraph{Szociális struktúra}\\label{szociuxe1lis-struktuxfara}}$/;"	P	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Széles választék, egyedi minősítő rendszer szükségessége (FS-H-M)	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Széles választék, egyedi minősítő rendszer szükségessége (FS-H-M)$/;"	S
+Széles választék, egyedi minősítő rendszer szükségessége (FS-H-M)	értekezés.tex	/^\\subsubsection{Széles választék, egyedi minősítő rendszer szükségessége$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+TOP  a publikáció témája                                                                S	F1_Keretek/01_Systematic_mapping_study.md	/^TOP  a publikáció témája                                                                S  $/;"	s
+Tanúsítványok hiánya (FS-SZ-T)	értekezés.tex	/^\\subsubsection{Tanúsítványok hiánya (FS-SZ-T)}\\label{FS-SZ-T}}$/;"	b	subsection:FLOSS Taxonomia""Belső szabályozás (FS-SZ-B)
+Tanúsítványok hiánya (FS-SZ-T) {#sec:FS-SZ-T}	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^### Tanúsítványok hiánya (FS-SZ-T) {#sec:FS-SZ-T}$/;"	S
+Technikai átláthatóság (FS-J-Á)	F2_FOSS_Sajátosságok/J_Termék.md	/^### Technikai átláthatóság (FS-J-Á)$/;"	S
+Technikai átláthatóság (FS-J-Á)	értekezés.tex	/^\\subsubsection{Technikai átláthatóság$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Terjesztés módja (FS-T-M)	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Terjesztés módja (FS-T-M)$/;"	S
+Terjesztés módja (FS-T-M)	értekezés.tex	/^\\subsubsection{Terjesztés módja$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Terjesztés és támogatás	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^Terjesztés és támogatás$/;"	s
+Terjesztés és támogatás	értekezés.tex	/^\\subsection{Terjesztés és$/;"	u	section:FLOSS Taxonomia
+Tervezés  (FS-F-P)	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Tervezés  (FS-F-P)$/;"	S
+Tervezés (FS-F-P)	értekezés.tex	/^\\subsubsection{Tervezés (FS-F-P)}\\label{tervezuxe9s-fs-f-p}}$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Tesztelési és kiadási szakasz	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Tesztelési és kiadási szakasz$/;"	S
+Tesztelési és kiadási szakasz	értekezés.tex	/^\\subsubsection{Tesztelési és kiadási$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Továbbfejlesztési lehetőségek	Összefoglalás/03_Korlátok_és_lehetőségek.md	/^## Továbbfejlesztési lehetőségek$/;"	s
+Tudatosság és képzés (PR.AT)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Tudatosság és képzés (PR.AT)$/;"	S
+Tudományos probléma megfogalmazása	értekezés.tex	/^\\subsection*{Tudományos probléma$/;"	u	section:Bevezetés
+Tudományos probléma megfogalmazása, időszerűsége	Bevezetés/1.Probléma_megfogalmazása.md	/^Tudományos probléma megfogalmazása, időszerűsége$/;"	s
+Támogató tevékenység eltérései (FS-T-T)	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Támogató tevékenység eltérései (FS-T-T)$/;"	S
+Támogató tevékenység eltérései (FS-T-T)	értekezés.tex	/^\\subsubsection{Támogató tevékenység eltérései$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Társadalmi hatás, tudati dimenzió (FS-G-T)	F2_FOSS_Sajátosságok/G_Gazdaság_és_társadalom.md	/^### Társadalmi hatás, tudati dimenzió (FS-G-T)$/;"	S
+Társadalmi hatás, tudati dimenzió (FS-G-T)	értekezés.tex	/^\\subsubsection{Társadalmi hatás, tudati dimenzió$/;"	b	subsection:FLOSS Taxonomia""Gazdasági és társadalmi hatás
+Válaszlépés (RS)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^## Válaszlépés (RS)$/;"	s
+Válaszlépés tervezés (RS.RP)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Válaszlépés tervezés (RS.RP)$/;"	S
+Védelem (PR)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^## Védelem (PR)$/;"	s
+Védelmi technológia (PR.PT)	F3_FOSS_Biztonsági_Hatásai/2.Intézkedések.md	/^### Védelmi technológia (PR.PT)$/;"	S
+[[	Session.vim	/^nmap <buffer> [[ <Plug>(pandoc-keyboard-rw-header)$/;"	m
+[]	Session.vim	/^nmap <buffer> [] <Plug>(pandoc-keyboard-rw-sect-end)$/;"	m
+\\#	Session.vim	/^nmap <buffer> \\# <Plug>(pandoc-keyboard-apply-header)$/;"	m
+\\'	Session.vim	/^nmap <buffer> \\' <Plug>(pandoc-keyboard-toggle-verbatim)$/;"	m
+\\'	Session.vim	/^vmap <buffer> \\' <Plug>(pandoc-keyboard-toggle-verbatim)$/;"	m
+\\^	Session.vim	/^nmap <buffer> \\^ <Plug>(pandoc-keyboard-toggle-superscript)$/;"	m
+\\^	Session.vim	/^vmap <buffer> \\^ <Plug>(pandoc-keyboard-toggle-superscript)$/;"	m
+\\_	Session.vim	/^nmap <buffer> \\_ <Plug>(pandoc-keyboard-toggle-subscript)$/;"	m
+\\_	Session.vim	/^vmap <buffer> \\_ <Plug>(pandoc-keyboard-toggle-subscript)$/;"	m
+\\b	Session.vim	/^nmap <buffer> \\b <Plug>(pandoc-keyboard-toggle-strong)$/;"	m
+\\b	Session.vim	/^vmap <buffer> \\b <Plug>(pandoc-keyboard-toggle-strong)$/;"	m
+\\d	Session.vim	/^nnoremap \\d :YcmShowDetailedDiagnostic$/;"	m
+\\gB	Session.vim	/^nmap <buffer> \\gB <Plug>(pandoc-keyboard-links-file-back)$/;"	m
+\\gb	Session.vim	/^nmap <buffer> \\gb <Plug>(pandoc-keyboard-links-back)$/;"	m
+\\gl	Session.vim	/^nmap <buffer> \\gl <Plug>(pandoc-keyboard-links-open)$/;"	m
+\\hb	Session.vim	/^nmap <buffer> \\hb <Plug>(pandoc-keyboard-prev-header)$/;"	m
+\\hcf	Session.vim	/^nmap <buffer> \\hcf <Plug>(pandoc-keyboard-first-header-child)$/;"	m
+\\hcl	Session.vim	/^nmap <buffer> \\hcl <Plug>(pandoc-keyboard-last-header-child)$/;"	m
+\\hcn	Session.vim	/^nmap <buffer> \\hcn <Plug>(pandoc-keyboard-nth-header-child)$/;"	m
+\\hd	Session.vim	/^nmap <buffer> \\hd <Plug>(pandoc-keyboard-remove-header)$/;"	m
+\\hh	Session.vim	/^nmap <buffer> \\hh <Plug>(pandoc-keyboard-cur-header)$/;"	m
+\\hn	Session.vim	/^nmap <buffer> \\hn <Plug>(pandoc-keyboard-next-header)$/;"	m
+\\hp	Session.vim	/^nmap <buffer> \\hp <Plug>(pandoc-keyboard-cur-header-parent)$/;"	m
+\\hsb	Session.vim	/^nmap <buffer> \\hsb <Plug>(pandoc-keyboard-prev-header-sibling)$/;"	m
+\\hsn	Session.vim	/^nmap <buffer> \\hsn <Plug>(pandoc-keyboard-next-header-sibling)$/;"	m
+\\i	Session.vim	/^nmap <buffer> \\i <Plug>(pandoc-keyboard-toggle-emphasis)$/;"	m
+\\i	Session.vim	/^vmap <buffer> \\i <Plug>(pandoc-keyboard-toggle-emphasis)$/;"	m
+\\lcf	Session.vim	/^nmap <buffer> \\lcf <Plug>(pandoc-keyboard-first-li-child)$/;"	m
+\\lcl	Session.vim	/^nmap <buffer> \\lcl <Plug>(pandoc-keyboard-last-li-child)$/;"	m
+\\lcn	Session.vim	/^nmap <buffer> \\lcn <Plug>(pandoc-keyboard-nth-li-child)$/;"	m
+\\let\\Begin\\begin	config.md	/^#               \\let\\Begin\\begin$/;"	c
+\\let\\End\\end	config.md	/^#               \\let\\End\\end$/;"	c
+\\ll	Session.vim	/^nmap <buffer> \\ll <Plug>(pandoc-keyboard-cur-li)$/;"	m
+\\llp	Session.vim	/^nmap <buffer> \\llp <Plug>(pandoc-keyboard-cur-li-parent)$/;"	m
+\\ln	Session.vim	/^nmap <buffer> \\ln <Plug>(pandoc-keyboard-next-li)$/;"	m
+\\lp	Session.vim	/^nmap <buffer> \\lp <Plug>(pandoc-keyboard-prev-li)$/;"	m
+\\lsn	Session.vim	/^nmap <buffer> \\lsn <Plug>(pandoc-keyboard-next-li-sibling)$/;"	m
+\\lsp	Session.vim	/^nmap <buffer> \\lsp <Plug>(pandoc-keyboard-prev-li-sibling)$/;"	m
+\\nr	Session.vim	/^nmap <buffer> \\nr <Plug>(pandoc-keyboard-ref-insert)$/;"	m
+\\rb	Session.vim	/^nmap <buffer> \\rb <Plug>(pandoc-keyboard-ref-backfrom)$/;"	m
+\\rg	Session.vim	/^nmap <buffer> \\rg <Plug>(pandoc-keyboard-ref-goto)$/;"	m
+\\sl	Session.vim	/^nmap <buffer> \\sl <Plug>(pandoc-keyboard-links-split)$/;"	m
+\\xi	Session.vim	/^nmap <buffer> \\xi <Plug>(pandoc-hypertext-goto-id)$/;"	m
+\\~~	Session.vim	/^nmap <buffer> \\~~ <Plug>(pandoc-keyboard-toggle-strikeout)$/;"	m
+\\~~	Session.vim	/^vmap <buffer> \\~~ <Plug>(pandoc-keyboard-toggle-strikeout)$/;"	m
+\x16\aS	Session.vim	/^imap S <Plug>ISurround$/;"	m
+\x16\as	Session.vim	/^imap s <Plug>Isurround$/;"	m
+\x16\t	Session.vim	/^inoremap <expr> 	 pumvisible() ? "\\" : "\\	"$/;"	m
+\x16\x13	Session.vim	/^imap  <Plug>Isurround$/;"	m
+][	Session.vim	/^nmap <buffer> ][ <Plug>(pandoc-keyboard-ff-sect-end)$/;"	m
+]]	Session.vim	/^nmap <buffer> ]] <Plug>(pandoc-keyboard-ff-header)$/;"	m
+aPe	Session.vim	/^omap <buffer> aPe :normal vaPe$/;"	m
+aPe	Session.vim	/^vmap <buffer> <silent> aPe <Plug>(pandoc-keyboard-select-emphasis-inclusive)$/;"	m
+aPk	Session.vim	/^omap <buffer> aPk :normal vaPk$/;"	m
+aPk	Session.vim	/^vmap <buffer> <silent> aPk <Plug>(pandoc-keyboard-select-strikeout-inclusive)$/;"	m
+aPs	Session.vim	/^omap <buffer> aPs :normal vaPs$/;"	m
+aPs	Session.vim	/^vmap <buffer> <silent> aPs <Plug>(pandoc-keyboard-select-strong-inclusive)$/;"	m
+aPt	Session.vim	/^omap <buffer> aPt :normal vaPl$/;"	m
+aPt	Session.vim	/^vmap <buffer> <silent> aPt <Plug>(pandoc-keyboard-select-subscript-inclusive)$/;"	m
+aPu	Session.vim	/^omap <buffer> aPu :normal vaPu$/;"	m
+aPu	Session.vim	/^vmap <buffer> <silent> aPu <Plug>(pandoc-keyboard-select-superscript-inclusive)$/;"	m
+aPv	Session.vim	/^omap <buffer> aPv :normal vaPv$/;"	m
+aPv	Session.vim	/^vmap <buffer> <silent> aPv <Plug>(pandoc-keyboard-select-verbatim-inclusive)$/;"	m
+aS	Session.vim	/^omap <buffer> aS :normal VaS$/;"	m
+aS	Session.vim	/^vmap <buffer> aS <Plug>(pandoc-keyboard-select-section-inclusive)$/;"	m
+add_data	bin/gencdoc.py	/^def add_data(data,a,b,c,value):$/;"	f
+alacsony-hibaszuxe1m-jobb-kuxf3dminux151suxe9g-fs-j-h	értekezés.tex	/^(FS-J-H)}\\label{alacsony-hibaszuxe1m-jobb-kuxf3dminux151suxe9g-fs-j-h}}$/;"	l
+azonosuxedtott-javaslatok	értekezés.tex	/^javaslatok}\\label{azonosuxedtott-javaslatok}}$/;"	l
+bevezetuxe9s	értekezés.tex	/^\\section{Bevezetés}\\label{bevezetuxe9s}}$/;"	l
+c1	bin/gencdoc.py	/^c1 = "unknown"$/;"	v
+c2	bin/gencdoc.py	/^c2 = "unknown"$/;"	v
+c3	bin/gencdoc.py	/^c3 = "unknown"$/;"	v
+catdesc	bin/gencdoc.py	/^            catid, catdesc = category.split(":")$/;"	v
+catid	bin/gencdoc.py	/^            catid, catdesc = category.split(":")$/;"	v
+cleanlist	bin/gencdoc.py	/^def cleanlist(textlist):$/;"	f
+counter	bin/gencdoc.py	/^        counter=1$/;"	v
+cs	Session.vim	/^nmap cs <Plug>Csurround$/;"	m
+data	bin/gencdoc.py	/^data = {}$/;"	v
+doc	bin/gencdoc.py	/^doc = ezodf.opendoc(file)$/;"	v
+dokumentuxe1ciuxf3s-tuxe9r-architektuxfara-uxe9s-api-dokumentuxe1ciuxf3-fs-m-a	értekezés.tex	/^(FS-M-A)}\\label{dokumentuxe1ciuxf3s-tuxe9r-architektuxfara-uxe9s-api-dokumentuxe1ciuxf3-fs-m-a}/;"	l
+ds	Session.vim	/^nmap ds <Plug>Dsurround$/;"	m
+duxf6ntuxe9shozatal-iruxe1nyuxedtuxe1s-befolyuxe1s	értekezés.tex	/^befolyás}\\label{duxf6ntuxe9shozatal-iruxe1nyuxedtuxe1s-befolyuxe1s}}$/;"	l
+egyedi-iguxe9nyekhez-alakuxedthatuxf3suxe1g-testreszabuxe1s-fs-h-t	értekezés.tex	/^(FS-H-T)}\\label{egyedi-iguxe9nyekhez-alakuxedthatuxf3suxe1g-testreszabuxe1s-fs-h-t}}$/;"	l
+egyeztetuxe9si-tuxe9r-a-fejlesztux151i-kommunikuxe1ciuxf3-vizsguxe1lata-fs-m-k	értekezés.tex	/^(FS-M-K)}\\label{egyeztetuxe9si-tuxe9r-a-fejlesztux151i-kommunikuxe1ciuxf3-vizsguxe1lata-fs-m-k}/;"	l
+egyszerux171-hozzuxe1fuxe9rhetux151suxe9g-fs-t-e	értekezés.tex	/^(FS-T-E)}\\label{egyszerux171-hozzuxe1fuxe9rhetux151suxe9g-fs-t-e}}$/;"	l
+eszkuxf6zhasznuxe1lat-fs-f-e	értekezés.tex	/^(FS-F-E)}\\label{eszkuxf6zhasznuxe1lat-fs-f-e}}$/;"	l
+fejlesztux151i-felhasznuxe1luxe1s-integruxe1ciuxf3-fs-h-i	értekezés.tex	/^(FS-H-I)}\\label{fejlesztux151i-felhasznuxe1luxe1s-integruxe1ciuxf3-fs-h-i}}$/;"	l
+fejlesztux151kuxf6zuxf6ssuxe9g-feluxe9puxedtuxe9se	értekezés.tex	/^felépítése}\\label{fejlesztux151kuxf6zuxf6ssuxe9g-feluxe9puxedtuxe9se}}$/;"	l
+fejlesztuxe9si-folyamatok	értekezés.tex	/^\\subsection{Fejlesztési folyamatok}\\label{fejlesztuxe9si-folyamatok}}$/;"	l
+felhasznuxe1luxe1s	értekezés.tex	/^\\subsection{Felhasználás}\\label{felhasznuxe1luxe1s}}$/;"	l
+felhasznuxe1luxf3i-dokumentuxe1ciuxf3-fs-j-d	értekezés.tex	/^(FS-J-D)}\\label{felhasznuxe1luxf3i-dokumentuxe1ciuxf3-fs-j-d}}$/;"	l
+felhasznuxe1luxf3i-tuxe1bor	értekezés.tex	/^\\subsubsection{Felhasználói tábor}\\label{felhasznuxe1luxf3i-tuxe1bor}}$/;"	l
+felkutatása             nehéz a kompetens fejlesztőket és szakértőket megtalálni	F2_FOSS_Sajátosságok/J_Termék.md	/^felkutatása             nehéz a kompetens fejlesztőket és szakértőket megtalálni$/;"	s
+fid	bin/gencdoc.py	/^        fid = function.split("(")[1].split(")")[0]$/;"	v
+fig:HagymaModell	értekezés.tex	/^{[}220{]})}\\label{fig:HagymaModell}$/;"	l
+fig:OSSDSzerv	értekezés.tex	/^\\caption{OSSD szervezeti környezete (saját forrás)}\\label{fig:OSSDSzerv}$/;"	l
+fig:OSSD_struct	értekezés.tex	/^\\label{fig:OSSD_struct}$/;"	l
+fig:QuESo	értekezés.tex	/^keretrendszerrel Forrás:{[}141{]}}\\label{fig:QuESo}$/;"	l
+fig:figCompDevStruct	értekezés.tex	/^viszony]{\\includegraphics[width=0.5\\textwidth,height=\\textheight]{ábrák\/component-develope/;"	l
+fig:figPeriphery	értekezés.tex	/^minta]{\\includegraphics[width=0.5\\textwidth,height=\\textheight]{ábrák\/core-periphery-patte/;"	l
+floss-mint-termuxe9k-termuxe9ktulajdonsuxe1gok-fs-j	értekezés.tex	/^(FS-J)}\\label{floss-mint-termuxe9k-termuxe9ktulajdonsuxe1gok-fs-j}}$/;"	l
+floss-taxonomia	értekezés.tex	/^\\section{FLOSS Taxonomia}\\label{floss-taxonomia}}$/;"	l
+frissuxedtuxe9sek-kiaduxe1si-uxfctemezuxe9s-fs-t-k	értekezés.tex	/^(FS-T-K)}\\label{frissuxedtuxe9sek-kiaduxe1si-uxfctemezuxe9s-fs-t-k}}$/;"	l
+gS	Session.vim	/^xmap gS <Plug>VgSurround$/;"	m
+gazdasuxe1gi-hatuxe1s-fs-g-g	értekezés.tex	/^(FS-G-G)}\\label{gazdasuxe1gi-hatuxe1s-fs-g-g}}$/;"	l
+gazdasuxe1gi-uxe9s-tuxe1rsadalmi-hatuxe1s	értekezés.tex	/^hatás}\\label{gazdasuxe1gi-uxe9s-tuxe1rsadalmi-hatuxe1s}}$/;"	l
+gf	Session.vim	/^nmap <buffer> gf <Plug>(pandoc-hypertext-open-local)$/;"	m
+gx	Session.vim	/^nmap <buffer> gx <Plug>(pandoc-hypertext-open-system)$/;"	m
+gx	Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
+gx	Session.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
+gyuxe1rtuxf3fuxfcggetlensuxe9g-fs-h-gy	értekezés.tex	/^(FS-H-Gy)}\\label{gyuxe1rtuxf3fuxfcggetlensuxe9g-fs-h-gy}}$/;"	l
+hasznuxe1lhatuxf3suxe1g-hordozhatuxf3suxe1g-funkcionalituxe1s-fs-j-h	értekezés.tex	/^(FS-J-H)}\\label{hasznuxe1lhatuxf3suxe1g-hordozhatuxf3suxe1g-funkcionalituxe1s-fs-j-h}}$/;"	l
+iPe	Session.vim	/^omap <buffer> iPe :normal viPe$/;"	m
+iPe	Session.vim	/^vmap <buffer> <silent> iPe <Plug>(pandoc-keyboard-select-emphasis-exclusive)$/;"	m
+iPk	Session.vim	/^omap <buffer> iPk :normal viPk$/;"	m
+iPk	Session.vim	/^vmap <buffer> <silent> iPk <Plug>(pandoc-keyboard-select-strikeout-exclusive)$/;"	m
+iPs	Session.vim	/^omap <buffer> iPs :normal viPs$/;"	m
+iPs	Session.vim	/^vmap <buffer> <silent> iPs <Plug>(pandoc-keyboard-select-strong-exclusive)$/;"	m
+iPt	Session.vim	/^omap <buffer> iPt :normal viPl$/;"	m
+iPt	Session.vim	/^vmap <buffer> <silent> iPt <Plug>(pandoc-keyboard-select-subscript-exclusive)$/;"	m
+iPu	Session.vim	/^omap <buffer> iPu :normal viPu$/;"	m
+iPu	Session.vim	/^vmap <buffer> <silent> iPu <Plug>(pandoc-keyboard-select-superscript-exclusive)$/;"	m
+iPv	Session.vim	/^omap <buffer> iPv :normal viPv$/;"	m
+iPv	Session.vim	/^vmap <buffer> <silent> iPv <Plug>(pandoc-keyboard-select-verbatim-exclusive)$/;"	m
+iS	Session.vim	/^omap <buffer> iS :normal ViS$/;"	m
+iS	Session.vim	/^vmap <buffer> iS <Plug>(pandoc-keyboard-select-section-exclusive)$/;"	m
+implementuxe1ciuxf3s-tuxe9r-a-forruxe1skuxf3d-elemzuxe9se-fs-m-i	értekezés.tex	/^(FS-M-I)}\\label{implementuxe1ciuxf3s-tuxe9r-a-forruxe1skuxf3d-elemzuxe9se-fs-m-i}}$/;"	l
+info	bin/gencdoc.py	/^    info = [c.value.strip() if c.value else None for c in cellist[3:]]$/;"	v
+interoperabilituxe1s-kompatibilituxe1s-szabvuxe1nykuxf6vetuxe9s-fs-j-k	értekezés.tex	/^(FS-J-K)}\\label{interoperabilituxe1s-kompatibilituxe1s-szabvuxe1nykuxf6vetuxe9s-fs-j-k}}$/;"	l
+j	Session.vim	/^nnoremap <buffer> j gj$/;"	m
+j	Session.vim	/^vnoremap <buffer> j gj$/;"	m
+jellemzux151-piaci-szegmensek	értekezés.tex	/^szegmensek}\\label{jellemzux151-piaci-szegmensek}}$/;"	l
+jk	Session.vim	/^inoremap jk $/;"	m
+k	Session.vim	/^nnoremap <buffer> k gk$/;"	m
+k	Session.vim	/^vnoremap <buffer> k gk$/;"	m
+karbantartuxf3i-tuxe9r-hibajegyek-hibakommunikuxe1ciuxf3-fs-m-h	értekezés.tex	/^(FS-M-H)}\\label{karbantartuxf3i-tuxe9r-hibajegyek-hibakommunikuxe1ciuxf3-fs-m-h}}$/;"	l
+kivitelezuxe9si-szakasz-fs-f-v	értekezés.tex	/^(FS-F-V)}\\label{kivitelezuxe9si-szakasz-fs-f-v}}$/;"	l
+kutatuxe1s-idux151szerux171suxe9ge	értekezés.tex	/^időszerűsége}\\label{kutatuxe1s-idux151szerux171suxe9ge}}$/;"	l
+kutatuxe1si-cuxe9lkitux171zuxe9sek	értekezés.tex	/^célkitűzések}\\label{kutatuxe1si-cuxe9lkitux171zuxe9sek}}$/;"	l
+kutatuxe1si-hipotuxe9zisek	értekezés.tex	/^\\subsection{Kutatási hipotézisek}\\label{kutatuxe1si-hipotuxe9zisek}}$/;"	l
+kutatuxe1si-muxf3dszerek	értekezés.tex	/^\\subsection{Kutatási módszerek}\\label{kutatuxe1si-muxf3dszerek}}$/;"	l
+kuxf6vetelmuxe9nyek-meghatuxe1rozuxe1suxe1nak-eltuxe9ruxe9sei-fs-f-k	értekezés.tex	/^(FS-F-K)}\\label{kuxf6vetelmuxe9nyek-meghatuxe1rozuxe1suxe1nak-eltuxe9ruxe9sei-fs-f-k}}$/;"	l
+kuxf6zuxf6ssuxe9g-szubkultuxfara-fs-k	értekezés.tex	/^(FS-K)}\\label{kuxf6zuxf6ssuxe9g-szubkultuxfara-fs-k}}$/;"	l
+lobbitevuxe9kenysuxe9g-hiuxe1nya-fs-t-l	értekezés.tex	/^(FS-T-L)}\\label{lobbitevuxe9kenysuxe9g-hiuxe1nya-fs-t-l}}$/;"	l
+metaadatok-fs-m	értekezés.tex	/^\\subsection{Metaadatok (FS-M)}\\label{metaadatok-fs-m}}$/;"	l
+migruxe1ciuxf3-fs-h-m	értekezés.tex	/^\\subsubsection{Migráció (FS-H-M)}\\label{migruxe1ciuxf3-fs-h-m}}$/;"	l
+minux151suxe9gbiztosuxedtuxe1s-fs-f-m	értekezés.tex	/^(FS-F-M)}\\label{minux151suxe9gbiztosuxedtuxe1s-fs-f-m}}$/;"	l
+nyuxedlt-forruxe1s-biztonsuxe1gi-hatuxe1sai	értekezés.tex	/^hatásai}\\label{nyuxedlt-forruxe1s-biztonsuxe1gi-hatuxe1sai}}$/;"	l
+pol	bin/gencdoc.py	/^pol = { i: [ x for x in xs if x[0:3] in ["NIS","COB"] ] for i, xs in SecPol.items()}$/;"	v
+ruxe9sztvevux151k	értekezés.tex	/^\\subsubsection{Résztvevők}\\label{ruxe9sztvevux151k}}$/;"	l
+s:cpo_save	Session.vim	/^let s:cpo_save=&cpo$/;"	v
+s:l	Session.vim	/^let s:l = 31 - ((18 * winheight(0) + 37) \/ 74)$/;"	v
+s:l	Session.vim	/^let s:l = 70 - ((39 * winheight(0) + 38) \/ 76)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+sheet	bin/gencdoc.py	/^sheet = doc.sheets[0]$/;"	v
+subcatdesc	bin/gencdoc.py	/^                subcatid, subcatdesc = subcategory.split(":")$/;"	v
+subcatid	bin/gencdoc.py	/^                subcatid, subcatdesc = subcategory.split(":")$/;"	v
+szervezet-fs-k-sz	értekezés.tex	/^\\subsubsection{Szervezet (FS-K-Sz)}\\label{szervezet-fs-k-sz}}$/;"	l
+szociuxe1lis-struktuxfara	értekezés.tex	/^\\paragraph{Szociális struktúra}\\label{szociuxe1lis-struktuxfara}}$/;"	l
+szuxe9les-vuxe1lasztuxe9k-egyedi-minux151suxedtux151-rendszer-szuxfcksuxe9gessuxe9ge-fs-h-m	értekezés.tex	/^(FS-H-M)}\\label{szuxe9les-vuxe1lasztuxe9k-egyedi-minux151suxedtux151-rendszer-szuxfcksuxe9gessu/;"	l
+tbl:Elux151ny	értekezés.tex	/^\\caption{\\label{tbl:Elux151ny}Műszaki előnyök Morgan és Finnegan szerint$/;"	l
+tbl:Huxe1truxe1ny	értekezés.tex	/^\\caption{\\label{tbl:Huxe1truxe1ny}FLOSS gazdasági hátrányai Morgan és$/;"	l
+tbl:IntKih	értekezés.tex	/^\\caption{\\label{tbl:IntKih}FLOSS integrációja során felmerülő lehetséges$/;"	l
+tbl:repos	értekezés.tex	/^\\caption{\\label{tbl:repos}Néhány népszerű programozási nyelv és a hozzá$/;"	l
+technikai-uxe1tluxe1thatuxf3suxe1g-fs-j-uxe1	értekezés.tex	/^(FS-J-Á)}\\label{technikai-uxe1tluxe1thatuxf3suxe1g-fs-j-uxe1}}$/;"	l
+terjesztuxe9s-muxf3dja-fs-t-m	értekezés.tex	/^(FS-T-M)}\\label{terjesztuxe9s-muxf3dja-fs-t-m}}$/;"	l
+terjesztuxe9s-uxe9s-tuxe1mogatuxe1s	értekezés.tex	/^támogatás}\\label{terjesztuxe9s-uxe9s-tuxe1mogatuxe1s}}$/;"	l
+tervezuxe9s-fs-f-p	értekezés.tex	/^\\subsubsection{Tervezés (FS-F-P)}\\label{tervezuxe9s-fs-f-p}}$/;"	l
+teszteluxe9si-uxe9s-kiaduxe1si-szakasz	értekezés.tex	/^szakasz}\\label{teszteluxe9si-uxe9s-kiaduxe1si-szakasz}}$/;"	l
+tudomuxe1nyos-probluxe9ma-megfogalmazuxe1sa	értekezés.tex	/^megfogalmazása}\\label{tudomuxe1nyos-probluxe9ma-megfogalmazuxe1sa}}$/;"	l
+tuxe1mogatuxf3-tevuxe9kenysuxe9g-eltuxe9ruxe9sei-fs-t-t	értekezés.tex	/^(FS-T-T)}\\label{tuxe1mogatuxf3-tevuxe9kenysuxe9g-eltuxe9ruxe9sei-fs-t-t}}$/;"	l
+tuxe1rsadalmi-hatuxe1s-tudati-dimenziuxf3-fs-g-t	értekezés.tex	/^(FS-G-T)}\\label{tuxe1rsadalmi-hatuxe1s-tudati-dimenziuxf3-fs-g-t}}$/;"	l
+uxe1tluxe1thatuxf3suxe1g	értekezés.tex	/^\\paragraph{Átláthatóság}\\label{uxe1tluxe1thatuxf3suxe1g}}$/;"	l
+uxf6nszervezux151duxe9s	értekezés.tex	/^\\paragraph{Önszerveződés}\\label{uxf6nszervezux151duxe9s}}$/;"	l
+uxf6sszefoglaluxe1s	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s}}$/;"	l
+uxf6sszefoglaluxe1s-1	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-1}}$/;"	l
+uxf6sszefoglaluxe1s-2	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-2}}$/;"	l
+uxf6sszefoglaluxe1s-3	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-3}}$/;"	l
+uxf6sszefoglaluxe1s-4	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-4}}$/;"	l
+uxf6sszefoglaluxe1s-5	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-5}}$/;"	l
+uxf6sszefoglaluxe1s-6	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-6}}$/;"	l
+uxf6sszefoglaluxe1s-7	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-7}}$/;"	l
+varmap	bin/gencdoc.py	/^    varmap = {v.value.strip():i+3 for i,v in enumerate(cellist[2:]) if v.value and v.value.strip/;"	v
+vim: set expandtab:	F2_FOSS_Sajátosságok/J_Termék.md	/^# vim: set expandtab:$/;"	c
+yS	Session.vim	/^nmap yS <Plug>YSurround$/;"	m
+ySS	Session.vim	/^nmap ySS <Plug>YSsurround$/;"	m
+ySs	Session.vim	/^nmap ySs <Plug>YSsurround$/;"	m
+ys	Session.vim	/^nmap ys <Plug>Ysurround$/;"	m
+yss	Session.vim	/^nmap yss <Plug>Yssurround$/;"	m
+{\\pagebreak[4]\\global\\pdfpageattr\\expandafter{\\the\\pdfpageattr/Rotate 0}}	config.md	/^#                {\\pagebreak[4]\\global\\pdfpageattr\\expandafter{\\the\\pdfpageattr\/Rotate 0}/;"	c
+{\\pagebreak[4]\\global\\pdfpageattr\\expandafter{\\the\\pdfpageattr/Rotate 90}}	config.md	/^#                {\\pagebreak[4]\\global\\pdfpageattr\\expandafter{\\the\\pdfpageattr\/Rotate 90/;"	c
+}	config.md	/^#          }$/;"	c
+Állami és nemzetközi szintű összefogás	F3_FOSS_Biztonsági_Hatásai/9.Részkövetkezetések.md	/^### Állami és nemzetközi szintű összefogás$/;"	S
+Átláthatóság	F2_FOSS_Sajátosságok/K_Közösség.md	/^#### Átláthatóság$/;"	t
+Átláthatóság	értekezés.tex	/^\\paragraph{Átláthatóság}\\label{uxe1tluxe1thatuxf3suxe1g}}$/;"	P	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Önszerveződés	F2_FOSS_Sajátosságok/K_Közösség.md	/^#### Önszerveződés$/;"	t
+Önszerveződés	értekezés.tex	/^\\paragraph{Önszerveződés}\\label{uxf6nszervezux151duxe9s}}$/;"	P	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Összefoglalás	F2_FOSS_Sajátosságok/F_Fejlesztés.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/G_Gazdaság_és_társadalom.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/H_Felhasználás.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/J_Termék.md	/^### Összefoglalás $/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/K_Közösség.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/M_Metaadatok.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^### Összefoglalás$/;"	S
+Összefoglalás	F2_FOSS_Sajátosságok/T_Terjesztés.md	/^### Összefoglalás$/;"	S
+Összefoglalás	Összefoglalás/00_Összefoglalás.md	/^Összefoglalás$/;"	c
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-1}}$/;"	b	subsection:FLOSS Taxonomia""Felhasználás
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-2}}$/;"	b	subsection:FLOSS Taxonomia""Gazdasági és társadalmi hatás
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-3}}$/;"	b	subsection:FLOSS Taxonomia""Közösség, szubkultúra (FS-K)
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-4}}$/;"	b	subsection:FLOSS Taxonomia""Metaadatok (FS-M)
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-5}}$/;"	b	subsection:FLOSS Taxonomia""Belső szabályozás (FS-SZ-B)
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-6}}$/;"	b	subsection:FLOSS Taxonomia""Terjesztés és támogatás
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s-7}}$/;"	b	subsection:FLOSS Taxonomia""FLOSS mint termék, terméktulajdonságok (FS-J)
+Összefoglalás	értekezés.tex	/^\\subsubsection{Összefoglalás}\\label{uxf6sszefoglaluxe1s}}$/;"	b	subsection:FLOSS Taxonomia""Fejlesztési folyamatok
+Összefoglaló analízis	F1_Keretek/01_Systematic_mapping_study.md	/^### Összefoglaló analízis $/;"	S
+Összegzett következtetések	Összefoglalás/01_Következtetések.md	/^Összegzett következtetések$/;"	s
+Összetett licencelés (FS-SZ-L)	értekezés.tex	/^\\subsubsection{Összetett licencelés (FS-SZ-L)}\\label{FS-SZ-L}}$/;"	b	subsection:FLOSS Taxonomia""Belső szabályozás (FS-SZ-B)
+Összetett licencelés (FS-SZ-L) {#sec:FS-SZ-L}	F2_FOSS_Sajátosságok/S_Szabályozás.md	/^### Összetett licencelés (FS-SZ-L) {#sec:FS-SZ-L}$/;"	S
+Új tudományos eredmények	Összefoglalás/04_tudományos_eredmények.md	/^Új tudományos eredmények$/;"	s
+Üzleti lehetőségek      lehetőséget ad kisebb csapatmérettel dolgozni, ami növeli a termelékenységet	F2_FOSS_Sajátosságok/J_Termék.md	/^Üzleti lehetőségek      lehetőséget ad kisebb csapatmérettel dolgozni, ami növeli a terme/;"	s

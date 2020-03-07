@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <title><?=$title?></title>
+    <link href="css/tool.css" rel="stylesheet" type="text/css" />
+    <script	src="js/jquery-3.1.0.min.js" ></script>
+		<script type="text/javascript" src="js/underscore-min.js"></script>
+		<script src="js/d3.v4.js"></script>
+    <script src="js/downloadsvg.js" charset="utf-8"></script>
+
+<style>
+  h1 {margin-bottom:3em;}
+  input.title{width:100%; font-size:130%;}
+</style>
+	</head>
+<body>
+<?php include "tool_menu.phtml";?>
+<form type="get">
+  <input type="text" class="title" name="title" value="<?=$title?>"/><br/>
+  <textarea name="sqlx"><?=$sqlx?></textarea>
+  <input type="button" value="⇄" id="swapSQL" />
+  <textarea name="sqly"><?=$sqly?></textarea>
+  <input type="submit" value="ok"/>
+  <input type="hidden" name="chart" value="SQLScatter" />
+</form>
+<div class="chart" id="chart"></div>
+<script>
+
+var text = d3.select('.chart');
+
+var sqlx = '<?=addslashes($sqlx)?>';
+var sqly = '<?=addslashes($sqly)?>';
+  
+$('#swapSQL').on('click',function(){
+  var tmp = $('textarea[name=sqlx]').val();
+  $('textarea[name=sqlx]').val($('textarea[name=sqly]').val());
+  $('textarea[name=sqly]').val(tmp);
+});
+
+function svgMove(list,x,y) {
+  list.attr("transform", "translate(" + x + "," + y + ")");
+}
+
+d3.json('tool.php?json=sqlScatter&sqlx='+encodeURIComponent(sqlx)+'&sqly='+encodeURIComponent(sqly), function(error,data) {
+	
+  if(error) {
+    alert(error.target.responseText);
+    return console.log(error);
+  }
+
+  
+  var margin = {};
+  margin.left = 40;
+  margin.bottom = 40;
+
+  var width = 400
+    , height = 400
+    , getCategory = (d,i) => i      // maps data to category
+    , getValue = (d) => d           // maps data to value
+    , colors = d3.schemeCategory20
+  ;
+
+  var xcat = data.valuesx
+    , ycat = data.valuesy
+    , nums = data.data
+  ; 
+
+  var sizeScale = d3.scaleLinear()
+                  .domain([0, Math.sqrt(d3.max(nums,(n)=>n.db))])
+                  .range([0,20])
+    , xScale = d3.scalePoint()
+        .domain(xcat)
+        .range([0, width - margin.left])
+        .padding(0.7)
+    , yScale = d3.scalePoint()
+        .domain(ycat)
+        .range([0, height - margin.bottom])
+        .padding(0.7)
+  ;
+
+  var getCircleR = (d) => sizeScale(Math.sqrt(d.db))
+    , getX = (d) => xScale(d.valuex)
+    , getY = (d) => yScale(d.valuey)
+  ;
+
+  console.log(data);
+
+  var xAxis = d3.axisBottom().scale(xScale);
+  var yAxis = d3.axisLeft().scale(yScale);
+  
+	var chart = d3.select('div.chart')
+    .append('svg')
+      .style('width',width + "px")
+      .style('height',height+ "px")
+  ;
+
+  chart.append('g')
+      .classed('axis',true)
+    .call(yAxis)
+      .call(svgMove,margin.left,0);
+  chart.append('g')
+      .classed('axis',true)
+      .call(xAxis)
+        .call(svgMove,margin.left,height-margin.bottom)
+      .selectAll('text')
+        .attr('y', '0')
+        .attr('x', '8')
+        .attr('text-anchor', 'start')
+        .attr('transform', 'rotate(60)')
+   ;
+
+  var circles = chart
+    .append('g')
+      .classed('chartarea',true)
+      .call(svgMove, margin.left, 0)
+    .selectAll('circle')
+    .data(nums)
+    .enter();
+
+  circles.append('circle')
+      .attr('r', getCircleR)
+      .attr('cx', getX)
+      .attr('cy', getY)
+      .style('fill', 'white')
+      .style('stroke', 'black')
+      .style('stroke-width', '1')
+     ;
+
+  circles.append('text')
+    .text((d)=>d.db)
+    .attr('x',getX)
+    .attr('y',(d) => getY(d) + 3 )
+    .style('text-anchor', 'middle')
+    .style('font-size', '8pt')
+    .style('display', (d) => {if (getCircleR(d)<6) return "none" ; else return "block";})
+});
+
+$(function(){
+  setTimeout(function(){
+    encode_as_img_and_link("#chart svg");
+  }, 1000);
+});
+
+</script>
+</body>
+</html>
+<?php # vim: set ts=2 sw=2 et :

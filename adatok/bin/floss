@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#
+# analyse floss vulnerabilities and remediation based of research findings
+#
+
+
+MYDIR=$(dirname $0)
+FLOSS_DATA_DIR=${FLOSS_DATA_DIR-"$MYDIR/../"}
+FLOSS_PUB_DIR=${FLOSS_PUB_DIR-"$MYDIR/../../disszertáció/"}
+FLOSS_DB=$FLOSS_DATA_DIR/floss.sqlite
+
+
+if [ ! -f $FLOSS_DB ] ; then
+	# create database
+	echo Initialize database $(basename FLOSS_DB) ...
+	sqlite3 $FLOSS_DB < $FLOSS_DATA_DIR/floss-database.sql
+
+	echo Loading data from csv ...
+	python3 $MYDIR/insert_floss_data.py $FLOSS_DB
+	
+	echo Importing BM-41 database from spreadsheets data ...
+	python3 $MYDIR/insert_bm_data.py
+
+	echo Importing NIST/effect database from table data ...
+	python3 $MYDIR/insert_nist_data.py $FLOSS_DB
+fi
+
+echo Generatig statistics ...
+# Queries
+sqlite3 $FLOSS_DB <<SQL
+SELECT "--------------------- melyik sérülékenységre hány javítás van ---------------------" ;
+SELECT vid, count(*) as middb, des  FROM m2v LEFT JOIN vulnerability USING(vid) GROUP BY vid ORDER BY middb;
+SELECT "--------------------- melyik sérülékenységre nincs javítás ---------------------" ;
+SELECT vid, des  FROM vulnerability LEFT JOIN m2v USING(vid) WHERE mid is NULL ORDER BY vid;
+SELECT "--------------------- Javítás amihez nincs sérülékenység? ---------------------" ;
+SELECT mid, des  FROM mitigation LEFT JOIN m2v USING(mid) WHERE vid is null ORDER BY mid;
+
+
+SELECT "--------------------- NIST-ben fel nem használt sérülékenységek ---------------------" ;
+SELECT vid, des  FROM vulnerability LEFT JOIN a2v USING(vid) WHERE aid is null ORDER BY vid;
+
+SELECT "--------------------- NIST-ben fel nem használt azonosított javítások  ---------------------" ;
+SELECT mid, des  FROM mitigation LEFT JOIN a2m USING(mid) WHERE aid is null ORDER BY mid;
+SQL
+

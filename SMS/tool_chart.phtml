@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <link href="css/tool.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script	src="js/jquery-3.1.0.min.js" ></script>
+  <script src="js/d3.v4.js" charset="utf-8"></script>
+  <script src="js/textures.min.js" charset="utf-8"></script>
+  <script src="js/downloadsvg.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/nv.d3.css" >
+  <style>
+        text {
+            font: 12px sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        html, body, #chart, svg {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<?php include "tool_menu.phtml";?>
+<h1><?=$chart?>:<?=$categ?></h1>
+<form type="get">
+<select name="chart">
+  <option>byYear</option>
+</select>
+<select name="categ">
+  <?php foreach($categories as $f) echo "<option>$f</option>" ?>
+</select>
+<input type="submit" value="ok"/>
+</form>
+<div id="chart"><svg></svg></div>
+<script>
+
+//  d3 diagram
+
+var svg = d3.select("svg"),
+    fullwidth = 500,
+    fullheight = 500,
+    lwidth = 10,
+    margin = {top: 20, right: 0, bottom: 30, left: 40},
+    width = fullwidth - margin.left - margin.right - lwidth,
+    height = fullheight - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    console.log(svg.attr("height"));
+
+var textures = 
+    [textures.lines().thicker(2).lighter(1)
+    ,textures.circles().complement().thicker(1).fill('transparent').strokeWidth(1).radius(2)
+    ,textures.lines().orientation("6/8").thicker(2).lighter(1)
+    ,textures.paths().d("woven").lighter().thicker(1.5)
+    ,textures.paths().d("squares").size(8).strokeWidth(1)
+    ,textures.lines().orientation("2/8", "6/8").size(6).strokeWidth(1)
+    ,textures.lines().orientation("4/8", "8/8").size(4).strokeWidth(1)
+    ,textures.circles().thicker(3).lighter(1)
+    ,textures.paths().d("crosses").size(7).strokeWidth(1)
+    ,textures.circles().radius(3).size(7).fill('transparent').strokeWidth(1)
+    ,textures.circles().complement().radius(1).size(6).strokeWidth(1)
+    ,textures.paths().d("hexagons").size(7).lighter().thicker(0.8)
+    ];
+
+    textures.map( (t)=> svg.call(t));
+
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .padding(0.2)
+    .align(0.5);
+
+var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
+
+var z = d3.scaleOrdinal()
+  .range( textures.map((d)=>d.url()));
+
+var stack = d3.stack();
+
+d3.json('tool.php?json=<?=$chart?>&categ=<?=$categ?>', function(error,input) {
+	if(error) throw error;
+
+  var categories =  input.categories;
+  var data = input.data;
+  
+  stack.keys(categories)
+    .value( (d,i) => (typeof d[i] === 'undefined')? 0: d[i] ) ;
+  var series = stack(data);
+
+  var maxheight = d3.max(series[series.length-1].map( (d) => d[1]))
+//    data.sort(function(a, b) { return b.total - a.total; });
+
+  x.domain([2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]);
+  //y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  y.domain([0, maxheight]).nice();
+  z.domain(categories);
+
+  console.log(series);
+
+  g.selectAll(".serie")
+    .data(series)
+    .enter().append("g")
+      .attr("class", "serie")
+      .attr("fill", (d) => z(d.key))
+      .attr("stroke", "black")
+    .selectAll("rect")
+    .data((d) => d)
+    .enter().append("rect")
+      .attr("x", (d) => x(d.data.year))
+      .attr("y", (d) => y(d[1]) )
+      .attr("height", (d) => y(d[0]) - y(d[1]) )
+      .attr("width", x.bandwidth());
+
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y).ticks(10, "s"))
+    .append("text")
+      .attr("transform", "translate(10,0)rotate(90)")
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "start")
+      .attr("fill", "#000")
+      .text("Number of Papers");
+
+  var legend = g.append("g")
+    .classed("legend-group",true)
+      .attr("transform", "translate("+(width)+",0)")
+    .selectAll(".legend")
+    .data(categories)
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", (d, i) => "translate(0," + i * 20 + ")")
+      .style("font", "10px sans-serif");
+
+  legend.append("rect")
+      .attr("x", lwidth - 12 )
+      .attr("width", 18)
+      .attr("height", 18)
+      .attr("fill", z);
+
+  legend.append("text")
+      .attr("x", lwidth - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .text((d) => d);
+});
+
+
+
+
+
+$(function(){
+  setTimeout(function(){
+    encode_as_img_and_link("#chart svg");
+  }, 1000);
+});
+
+
+</script>
+</body>
+</html>
+
+<?php # vim: set ts=2 sw=2 et :

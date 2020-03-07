@@ -1,0 +1,37 @@
+FS-J-H	Használhatóság, hordozhatóság
+FS-J-K	Kompatibilitás, szabványkövetés
+FS-J-Á	Átláthatóság, forráskód elérhetősége
+FS-J-M	Kódminőség, alacsony hibaszám
+FS-J-D	Hiányos dokumentáció
+FS-SZ-M	Jog a módosításra
+FS-SZ-T	Tanusítványok hiánya
+FS-SZ-D	Technikai diszkrimináció
+FS-SZ-B	Belső szabályozás
+FS-SZ-L	Összetett licencelés
+FS-SZ-K	Kormányzati szabályozás
+FS-T-T	Támogatás, support
+FS-T-E	Elérhetőség
+FS-T-M	Terjesztés módja
+FS-T-K	Kiadási gyakoriság
+FS-T-L	Marketing és lobbierő hiánya
+FS-G-G	Gazdasági hatás
+FS-G-T	Társadalmi hatás
+FS-K-R	Résztvevők a közösségben
+FE-K-SZ	Szervezeti felépítés
+FS-M-A	Architektúra és API dokumentáció
+FS-M-F	Forrás publikus elérhetősége
+FS-M-K	Fejlesztői kommunikáció elérhetősége
+FS-M-H	Hibajegyek elérhetősége
+FS-F-K	Eltérő követelmények
+FS-F-P	Programtervezési metodika
+FS-F-M	Minőségbiztosítási módszertan
+FS-F-T	Tesztelés
+FS-F-V	Kivitelezés és végrehatjás
+FS-F-E	Egyedi fejlesztői eszközök
+FS-H-M	Migráció
+FS-H-I	Fejlesztés, integráció
+FS-H-F	Jellemző felhasználói tábor
+FS-H-M	Választék, egyedi minősítés
+FS-H-P	Jellemző piaci szegmensek
+FS-H-T	Testreszabhatóság
+FS-H-T	Gyártófüggetlenség

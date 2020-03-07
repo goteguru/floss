@@ -1,0 +1,18 @@
+#!/usr/bin/perl -n
+#
+# tab szeparált file vesszővel szeparált mezőiből duplikált sorokat készít
+# pl:
+#
+# id	vala, miki, meno
+#
+# id vala
+# id miki
+# id meno
+
+@F = split "\t", $_;
+@L = split ",", $F[1] ;
+foreach $k (@L) {
+	$k =~ s/^\s*|\s*$//g;
+	print $F[0] . "\t" . $k . "\n" if $k;
+}
+

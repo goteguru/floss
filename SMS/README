@@ -1,0 +1,35 @@
+Requirements:
+	- php7 (apache or php-fpm)
+	- perl
+
+php futtató usernek (www-data) write jog kell a database könyvtárra!
+
+RQ1: Melyek a nyílt forrású szoftverek biztonsággal kapcsolatos egyedi sajátosságai?
+RQ2: A kutatói közösség milyen súllyal foglalkozik az egyes sajátosságokkal?
+RQ3: Milyen típusú kutatásokat végeztek a témában?
+RQ4: A jelenlegi FLOSS biztonsággal kapcsolatos eredmények milyen biztonsági hatásokat azonosítanak?
+
+Eredmények
+----------------
+
+(RQ1) Egyedi sajátosság lista. Kategorizált.
+
+(RQ2) 	- ábra: OSS sajátosságok oszlopdiagram
+	- ábra: scatter: OSS sajátosságok módszertan szerint	
+	- scatter: téma vs. OSS sajátosságok
+
+(RQ3): 	
+	- Évenkénti oszlopdiagramm kutatási papír fajtája szerint.
+	- Évenkénti oszlopdiagramm téma szerint.
+	- scatter: papírfajta vs. módszertan
+
+(RQ4):  - Évenkénti bontás: biztonsági hatások azonosítva
+	- 
+
+     
+
+
+TODO:
+* sajátosság lista kategorizálás 
+* témák rendszerezése
+

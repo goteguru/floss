@@ -1,0 +1,58 @@
+JF01|4|A szervezet részt vesz a projekt fejlesztésében, így biztosítva a számára kedvező célok elérését.|SF01,SF02,SF03,SF12,SF05,ST02
+JF02|4|A kód-hozzájárulásokat a projektre vonatkozó formai és minőségi szabályok betartásával, lehetőleg egy ismert közösségi tag segítségével kell bevezetni. | SH07,SK01,SK03,SK04
+JF03|1|Közvetlenül, kvantitatív módon ellenőrizhető a minőség szintje. |SF05, ST05
+JF04|3|Lehetőség van saját alternatív (forkolt) változat létrehozására.|SF07, SF11
+JF05|2|Egy adott állapot rögzítésével (snapshot) elkerülhető a folyamatos változás okozta problémák egy része. | SF04,SF06,SF07,SF10
+JH01|1|Formális tanúsítás híján a felhasznált komponensek kódját megbízhatósági modellekkel kell vizsgálni (pl. CodeTrust).|SH01, SH02, SF05
+JH02|3|A kód szabad módosíthatósága miatt várakozás nélkül javíthatóak a sérülékenységek, amennyiben a kód módosításához szükséges erőforrás és szakismeret rendelkezésre áll.| -
+JH04|2|A felhasználandó FLOSS komponenseket erre szakosodott szakértők révén szerezzük be. | SH04, SH05, SF05, SH08, SJ01, SM06
+JH05|1|A FLOSS komponens kiválasztásának folyamatát és körülményeit dokumentálni kell.  | SH05, SF05, SF10
+JH06|4|A kód változásait lehetőség szerint vissza kell vezetni az eredeti projektbe. |SH06,SF07,SF11
+JH07|3|A fejlesztést végző részlegnek legyen megfelelő verzió-követési terve.|SH06,SF07, SF10, SF13
+JH08|3|A beszállító vagy a fejlesztést végző részleg alkalmazzon FLOSS komponens kezelő keretrendszert. |SH06, SH03, SS03, SS02, SF07, SF10, SF13, SH08
+JH10|4|A forráskódban minden nem publikus információ világosan definiált legyen. A változások visszavezetésekor automatizált rendszerrel meg kell akadályozni a minősített információ kiszivárgását.|SH09, SF07
+JH11|2|Képzésekkel kell tudatosítani a komponens integrációval járó veszélyeket és a biztonságos felhasználáshoz szükséges eljárásokat|SH04, SH05, SH06, SH09, SF13, SH08
+JG01|1|A FLOSS állami vagy nemzetközi szinten kell támogatni, mert fellendülése a munkaoptimalizáció révén növeli az információbiztonságot.|SJ01
+JG02|2|A nyílt modell kockázatainak és lehetőségeinek oktatása szerepeljen a megfelelő oktatási intézményekben.|SG01
+JG03|3|Országos vagy európai egységes forráskód kezelő rendszer kialakítása szükséges.|SF05, SH08, SJ01
+JK01|4|A közösségbe fejlesztőket kell delegálni akiknek lehetőség szerint mentort kell keresni.|SJ01
+JK02|2|A belső szerkezet elemezhető, meghatározhatók a kulcsszereplők. Az adatok alapján kockázatelemzés végezhető.|SF07,ST02
+JK03|2|A digitális aláírásokat használó fejlesztők nyílt kulcsait (rendszerint GPG) be kell szerezni, biztonságos adatbázisban kell tárolni, hozzáférhetővé tenni és szükség esetén ellenőrizni.|
+JK04|2|Folyamatosan monitorozni kell a közösséget.|SK05
+JK05|2|Megfelelő lobbierőt kell kiépíteni az érdekérvényesítő képesség érdekében.|SH07,SF07,ST02
+JK06|2|Kapcsolatépítéssel és személyes találkozásokkal erősíthető a közösséggel való együttműködés (pl.találkozók szervezése).|SH07,SF07,ST02
+JK07|2|A vezetőkben tudatosítani kell, hogy az OSSD fejlesztőit más módon kell motiválni.|SK03, SK04, ST02, ST03
+JK08|4|Felelőst kell kijelölni (Gatekeeper) aki a közösséggel való kapcsolattartást és az oda áramló információt ellenőrzi.| SK06, SF07, SF14, SM05
+JK09|4|A közösségbe delegált fejlesztők elkülönített kommunikációja előnytelen, a közösségi csatornán folyó kommunikáció információtartalmára oda kell figyelni.| SK06
+JM01|1|Automatizált módszerekkel elemezhetőek a hibajegyek adatai|SF05,SF13
+JM02|2|Be kell azonosítani azokat a fejlesztőket, akik hatékonyan javítják a hibákat.| SM01, SM02, SM03, SF13, ST02
+JM03|2|Be kell azonosítani és követni azokat a hibakeresőket, akik valóban értékes hibajegyeket vesznek fel.|SF13
+JM04|2|A hibakezelésben és fejlesztői kommunikációban aktív módon részt kell venni, az információáramlás gyorsítása végett.|SM01, SM02, SM03, SM07, SF13, ST02
+JM05|1|Kódminőség vizsgálati módszerekkel elemezni lehet az elérhető forráskódot, ami szolgáltatásként is igénybe vehető.|SM04, SF05, ST05
+JM06|3|A kód alapján eldönthető, hogy a hiba valóban az adott rendszerből származik-e vagy sem.|-
+JM07|3|A kód alapján bizonyítható, hogy nem történik illegális adatgyűjtés (TCG kompatibilitás)|-
+JM08|4|Résztvétel esetén megfelelő szintre kell hozni a dokumentációt és tisztázni kell a feladatköröket.|SJ01
+JM09|1|Elemezni kell a metaadatokat, vagy ilyen elemzést lehetővé tevő minősítő keretrendszert kell igénybe venni|SF05, SJ01, ST05
+JM10|3|A magas biztonsági követelményű feladatokra a szervezet csak formálisan ellenőrizhető nyílt forráskódot használ.|SM08,SM09
+JM11|1|Forráskód és a hibajegyek elemzésével megítélhető a projekt stabilitása és fejlődési lehetőségei.| SH02, SH03, SH04,SF05,SF07, SF13
+JM12|1|Forráskód átnézésével a kódminőség közvetlenül becsülhető, az alacsony minőség nem rejthető el. |SF05, SM08
+JM13|2|A hibajegyeket már a kezdetektől jó minőségben, reprodukálást lehetővé tevő módon kell felvinni | SM01, SM02, SM03
+JS01|2|Dedikál FLOSS szabályzatot kell létrehozni vagy integrálni kell az egyedi elveket a saját eljárásokba|SS01
+JS02|4|Azonosítani és követi kell a felhasznált FLOSS elemeket, azok licenceit és tisztázni a vonatkozó felelősségeketet és szerepeket. |SS01
+JS03|3|A nyílt forrású licencek jogi keretet biztosítanak az azonnali helyi módosításokhoz, így azok szükség esetén külön megegyezés nélkül bármikor elvégezhetők.| -
+JS04|2|A fejlesztésben licenckezelő célszoftvereket kell használni.|SS02, SS03, SF10
+JS05|1|A beszállítóktól meg kell követelni a licenc-tudatosságot, a szállított szoftver esetén a felhasznált komponensek licenclistáját. |SS02, SF10
+JS06|1|Alternatív tanúsítási megoldások és/vagy központi költségvetésből finanszírozott hagyományos tanúsítási eljárások szükségesek.| SS04, SF05
+JS07|1|A FLOSS kormányzati szintű szabályozása fontos lenne a FLOSS integráció jogi kérdéseinek tisztázása érdekében.|SS02, SS03, SS05
+JT01|2|Nyomon kell követni a frissítéseket.|ST01,SF10, SF13
+JT02|2|Ellenőrzni kell a forráskód archívumának ellenőrző összegét, adott esetben a forráskódot| ST08, ST09, ST11
+JT03|1|Meg kell határozni milyen forrásból és milyen feltételek mellett engedélyezett a kódfelhasználás.|ST08, ST10, ST11, SF10, SF13, ST04
+JT04|3|Ellenőrizni kell a DVCS változáskészletét tanúsító digitális aláírásokat.|ST08
+JT05|3|A FLOSS projektet az eredeti forrásból kell fordítani, a bináris integritásának biztosítása végett.|ST08, ST10
+JT06|2|Össze kell gyűjteni és lehetőség szerint folyamatosan frissíteni a felhasznált FLOSS projekt sértetlenségének biztosítására használt valamennyi kriptográfiai nyílt kulcsot.|ST08, ST09
+JT07|3|Kritikus esetben a hibajavítást önerőből kell és lehet megoldani.|SF07,SF11
+JJ01|1|Ki kell használni a nyílt forrás nyilvános adatait a termékminősítés kalibrációja és validálása során.  |ST05
+JJ02|1|A minősítés belsőleg is elvégezhető, bár rendkívül erőforrásigényes.|SF05, SM06,SM11
+JJ03|1|Szükség esetén harmadik felet kell felkérni a biztonsági hiányosságok feltárására és a komponens minősítésére.|SF05, SM06,SM11
+XX01|2|Figyelembe kell venni a kulturális különbségeket, a közösség egyedi szociális elvárásait. |ST03
+XX02|1|A nyílt forrással kapcsolatos szaktudást megszerzését segítő és tanúsító képzést kell létrehozni.|ST06, ST07

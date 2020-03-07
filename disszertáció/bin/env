@@ -1,0 +1,14 @@
+# this file must be sourced like:  . bin/env
+
+if [ ! -e bin/env ] ; then
+	echo this file must be sourced from the root dir like . bin/env
+	exit
+fi
+
+export RDIR=$(pwd)
+export PATH=./bin:$PATH
+alias k=$RDIR/bin/k
+alias csere=$RDIR/bin/csere
+alias pdf=$RDIR/bin/mkpdf
+
+export PS1="PHD:\W> "

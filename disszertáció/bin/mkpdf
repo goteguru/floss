@@ -1,0 +1,18 @@
+pandoc -r markdown+multiline_tables+smart+fenced_divs \
+	--number-sections \
+        --filter pandoc-crossref \
+	--filter pandoc-citeproc \
+	--pdf-engine=lualatex \
+        --template template.latex \
+	-o mg-értekezés.pdf \
+	-s \
+config.md  \
+F0_Bevezetés/*.md \
+F1_Keretek/*.md \
+F2_FOSS_Sajátosságok/*.md \
+F3_FOSS_Biztonsági_Hatásai/*.md \
+F4_Vedelem/*.md \
+F5_Összefoglalás/*.md \
+	
+exit ###############################
+	--csl nke.csl \

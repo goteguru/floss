@@ -1,0 +1,60 @@
+SF01|1|Nincs formális tesztelés, ami megnehezíti a minőség-ellenőrzést.|FS-F-T
+SF02|1|Nem piac vezéreltek a követelmények, a biztonság nem feltétlen szempont, amire nincs ráhatásunk.           |FS-F-K
+SF03|1|Nincs formális biztonsági tervezés az informális követelményeket nehéz minősíteni.              |FS-F-K
+SF04|3|A kódbázisba sérülékenységet vezetnek be, ami az upstream változaton keresztül eléri a szervezet kódbázisát.            |FS-F-P 
+SF05|1|Hagyományos minőségbiztosítási elveknek nem felel meg, emiatt nehéz összehasonlítani, értékelni. |FS-F-M
+SF06|1|A beszállító vagy közösség nem monitorozza saját komponens projektjeit. Az azokban bevezetett sérülékenység a terméken keresztül a szervezethez is eljut. |FS-F-P
+SF07|3|A szervezet forkolja az eredeti kódbázist, de nincs erőforrása karbantartani azt. |FS-F-V
+SF10|3|A komponensek közötti szoros függőségek miatt a komponens frissítése számos részkomponens frissítését vonja maga után, ami ütközéshez és hibákhoz vezethet. |FS-F-P
+SF11|3|A kompatibilitás érdekében helyileg módosított komponens sérülékenységet vezet be. |FS-F-P
+SF12|4|A fejlesztőtábor kicsiny mérete lassítja vagy ellehetetleníti a hozzájárulásaink időben történő integrálását. |FS-F-V
+SF13|2|A fejlesztői vagy tesztelés alatti állapot használata növeli a sérülékenységek esélyét |FS-F-T
+SF14|3|A szervezet fejlesztőeszközei nem kompatibilisek a projektben használtakkal, ami lassítja  az együttműködést |FS-F-E
+SH01|1|A szervezet nem megfelelő minősítő rendszert alkalmaz a FLOSS termék minősítésére.|FS-H-M
+SH02|1|Megfelelő változat kiválasztása nehéz és időigényes. Emiatt előfordulhat, hogy nem a megfelelő változat kerül alkalmazásra. |FS-H-M
+SH03|2|A kontroll nélküli (esetleg rejtett) integráció a hibás komponensek révén sérülékenységek akaratlan beépítéséhez vezet.|FS-H-I
+SH04|1|A FLOSS komponensek minősítésére nem alkalmas a COTS esetén megszokott módszertan. |FS-H-M
+SH05|2|Az integrátor nem ismeri megfelelő mélységben az integrálandó komponenst így hibákat vezet be az integráció során.|FS-H-M
+SH06|3|Az integrált komponensen végzett módosítások összeütközésbe kerülnek az eredeti kódbázissal, ami a frissítések során hibákhoz vagy sérülékenységhez vezethet.|FS-H-T
+SH07|4|A szükséges módosításokat nem sikerül visszavezetni, a közösség elutasítja így a kódbázis ütközéseit folyamatosan figyelni kell, ami időigényes és hibalehetőségekkel terhelt. |FS-H-M
+SH08|1|Az integrált komponens összetett függőségein keresztül hibás (és ellenőrizetlen) alkomponensek szivároghatnak a fejlesztésbe.|FS-H-M 
+SH09|4|A módosítások visszavezetése során érzékeny információ szivárog ki az upstream projektbe. |FS-H-M
+SH10|1|Kompatibilitási problémák miatt a szervezet által alkalmazott felügyeleti rendszer nem támogatja a FLOSS változatot.|-
+SH11|1|A szükséges adatmigrációt követően a korábbi mentések helyreállítása nehézzé vagy lehetetlenné válik, veszélyeztetve a rendelkezésre állást.|FS-H-A
+SG01|1|Rejtett FLOSS használat miatt rosszul mérik fel a kockázatokat és nem alkalmazzák a szükséges védelmi eljárásokat.|FS-G-T
+SK01|1|A fejlesztők és a hibabejelentők közötti kommunikáció nem megfelelő.|FS-K-Sz
+SK02|1|Az alkotók nem mindig beazonosíthatók. Nehéz megállapítani, hogy több részmunkát ugyanaz a személy végezte-e el vagy sem.|FS-K-Sz
+SK03|1|Az erős cégirányítás miatt a fejlesztők elhagyják a projektet, veszélyeztetve a támogatást |FS-K-Sz
+SK04|4|Rossz vagy az elvárásoknak nem megfelelő kód küldése a bizalom, ezáltal az OSSD feletti irányítás elvesztését okozza. |FS-K-Sz
+SK05|1|Az OSSD vezető szereplője távozik (cég akvizíciója, fejlesztő kilépése), a támogatás folytonossága veszélybe kerül.|FS-K-Sz
+SK06|4|A delegált fejlesztők nyílt kommunikációja érzékeny adatokat tesz publikussá.|FS-K-Sz
+SM01|2|A hibajegy válasz nélkül maradhat. |FS-M-H
+SM02|2|A hiba javításának ellenőrzése késhet.|FS-M-H
+SM03|2|A hiba nem reprodukálható ezért figyelmen kívül hagyják|FS-M-H
+SM04|1|A forrástároló, a publikus hibajegyek és a hozzá tartozó foltok folyamatos analízisével a támadó sérülékenységeket fedezhet fel és használhat ki még azok javítása előtt.|FS-M-H
+SM05|2|A hibajegy hibakeresési csatolmányaként érzékeny információ kerül a publikus hibakereső rendszerre.|FS-M-H
+SM06|1|A nyilvános fejlesztői dokumentáció tervezési hiányosságokat tárhat fel. |FS-M-A
+SM07|1|A fejlesztői kommunikáció elemzésével a támadó még javítás előtt tudomást szerezhet a sérülékenységről. |FS-M-A
+SM08|1|A kód analízise megkönnyíti a támadó dolgát (az elvi lehetőség adott)|FS-M-I
+SM09|1|A támadó fél a forráskódban rejtett sérülékenységet helyez el.|FS-M-I 
+SM10|4|Nem világos hogyan kerül összhangba a forráskódban tárolt személyi adatok kérdése az adatvédelmi szabályozással (pl. GDPR).| -
+SM11|1| Az architektúra dokumentáció sokszor hiányos, így a tervezési hibákból adódó sérülékenységek nem nyilvánvalóak.|FS-M-A
+SS01|2|A megfelelő belső FLOSS szabályozás hiánya, átláthatatlan FLOSS felhasználáshoz vezet, a problémákat nem lehet megfelelően kezelni.|FS-SZ-B
+SS02|2|FLOSS komponens-felhasználás esetén az összetett és rejtett licencelés a szervezet tudta nélkül kompromittálhatja a jogszabályi megfelelést, ami kikényszerített határidős módosításokhoz vezet, veszélyeztetve a rendszer rendelkezésre állását és integritását.|FS-SZ-L
+SS03|2|A termék összetett függőségeiben ellentmondásos licencek találhatók vagy a licencelés megváltozik ami ellentmondáshoz vezet.|FS-SZ-L
+SS04|2|FLOSS projektek ritkán szereznek tanúsítást. Következésképpen nem alkalmazhatók olyan területeken ahol a tanúsítvány megléte előkövetelmény.|FS-SZ-K
+SS05|1|GPL licencű alkalmazások nem integrálhatják a szabadalomhoz kötött biztonsági megoldásokat|FS-SZ-L
+ST01|1|A gyors kiadási sűrűség és munkaigényes frissítés miatt a biztonsági javításokat nem vezetik át a downstream termékbe|FS-T-K
+ST02|2|Nincs szerződésben biztosított időkorlát a javításra, a javítás késhet.|FS-T-K
+ST03|2|Az udvariatlanul kért hibajavítást nem javítják megfelelő sebességgel.|FS-T-K
+ST04|2|Kiadás csúszása miatt a fejlesztői verziót kezdik el használni.|FS-T-K
+ST05|2|A szervezet félkész terméket tölt le.|FS-T-E
+ST06|2|Nincs szakemberképzés, előfordulhat, hogy a szervezet nem talál megfelelő szakembert, nincs tanusítás a szaktudásra.|FS-T-T
+ST07|2|Nincs szervezett képzés, az autodidakta tanulás minősége nem garantál, ami hibákhoz vezethet.|FS-T-T
+ST08|2|A letöltött bináris változat nem a kiadott forrásból készült|FS-T-M
+ST09|2|A letöltött bináris ellenőrzőösszegét vagy aláírását a felhasználó nem ellenőrzi.|FS-T-M
+ST10|1|A keresőmotor nem a megfelelő verziót vagy disztribútort hozza fel.|FS-T-L
+ST11|2|A felhasznált csomagkezelő rendszer (CPAN, hackage, deb) támadásával a felhasznált komponens támadható.|FS-T-M
+SJ01|2| A dokumentáció és a tényleges képességek és szükséges konfiguráció közt jelentős eltérés lehet, ami biztonsági problémákhoz vezethet.|FS-J-D
+SJ02|2|Megfelelő alapértelmezett beállítások híján a felhasználó (türelmetlenségből vagy figyelmetlenségből) hibás beállításokat alkalmazhat.|FS-J-H
+SJ03|1|A meglévő zárt rendszerekkel való inkompatibilitás. |FS-J-K

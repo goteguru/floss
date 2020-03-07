@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DB="database/paper.sqlite"
+ALL="database/all.sql"
+DATA="database/paper.data.sql"
+SCHEMA="database/paper.schema.sql"
+
+
+sqlite3 $DB .schema > $SCHEMA
+sqlite3 $DB .dump > $ALL
+grep -vx -f $SCHEMA $ALL > $DATA
+rm $ALL

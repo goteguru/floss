@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<link href="css/tool.css" rel="stylesheet" type="text/css" />
+	</head>
+	<style>
+		td {border:1px solid black;}
+		table {border-collapse: collapse;}
+	</style>
+<body>
+<?php include "tool_menu.phtml";?>
+<h1>Results <?=count($list)?></h1>
+<table>
+<tr>
+<?php 
+	if (!count($list)) die('no result');
+	foreach(array_keys($list[0]) as $c) echo "<th>$c</th>" 
+?>
+</tr>
+<?php foreach($list as $r):?>
+<tr>
+<?php foreach($r as $k=>$c) 
+	if ($k=='ZotKey') echo "<td><a href=\"tool.php?paper=$c\">$c</a></td>"; 
+	else echo "<td>$c</td>" 
+?>
+</tr>
+<?php endforeach?>
+</table>
+</body>
+</html>

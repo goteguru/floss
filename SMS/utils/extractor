@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+#use Data::Dumper;
+
+# required options
+my @options = qw(Biztonsag Tulajdonsag Flags Modszertan Contrib);
+
+#
+# number header line
+#
+my @head = split "\t", <>;
+chomp @head;
+my $i; my %head = map { $_ => $i++ } @head ;
+
+#header
+print "ZotKey\tProperty\tValue\n";
+while (<>) {
+	chomp;
+	my @line = split("\t", $_, -1);
+	# minden option-re normalizálunk
+	foreach my $o (@options) {
+		my @normalized = split(",", $line[$head{$o}]);
+		foreach (@normalized) {
+			$_ =~ s/^\s*|\s*$//g;
+			say "$line[0]\t$o\t$_";
+		}
+	}
+}
+
+# vim: set ts=4,sw=4

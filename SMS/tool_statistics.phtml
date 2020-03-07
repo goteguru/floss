@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="css/tool.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/underscore-min.js"></script>
+		<script src="js/d3.v4.js"></script>
+
+	</head>
+<body>
+<?php include "tool_menu.phtml";?>
+<h1>Statistics</h1>
+<div class="data"></div>
+
+<script>
+
+// D3 statisztikák
+
+var text = d3.select('.data');
+
+d3.json('tool.php?json=sums', function(error,data) {
+	
+  if(error) return console.log(error);
+
+	var alldata = _.extend(data.single, data.multi);
+	var categories = Object.keys(alldata);
+  var myChart = barCharter()
+      .category( (d) => d.value )
+      .value( (d) => +(d.db) )
+      ;
+
+	var catdivs = text
+    .selectAll('div.categ')
+		.data(categories)
+		.enter()
+      .append('div')
+      .attr('class','categ')
+	;
+
+	catdivs.append('h1').text((d)=>d);
+  catdivs.datum( (d) => alldata[d] )
+      .call(myChart);
+	
+	var uls = catdivs.append('ul')
+      .classed('legend',true)
+      ;
+
+  var colorScale=d3.scaleOrdinal( d3.schemeCategory20 );
+
+	// adatok
+	uls .selectAll('li')
+		.data((d)=>d)
+		.enter()
+			.append('li')
+			.text((d)=>d[Object.keys(d).shift()] + ':' + d.db)
+      .style('background' , (d,i) => colorScale(i))
+		;
+});
+
+
+/*
+ * custom barchart
+ */
+
+barCharter = function (config) {
+  var width = 500
+    , height = 500
+    , margin = 30
+    , getCategory = (d,i) => i      // maps data to category
+    , getValue = (d) => d           // maps data to value
+    , colors = d3.schemeCategory20
+  ;
+  var svg;
+
+  function svgMove(list,x,y) {
+    list.attr("transform", "translate(" + x + "," + y + ")");
+  }
+
+  function exports( selection ) {
+    selection.each(function(data) {
+      console.log('generated-data=' , data);
+      var chartW = width - 2*margin
+        , chartH = height - 2*margin
+        , bands = d3.scaleBand()
+            .domain(data.map( getCategory ))
+            .rangeRound([0, chartW])
+            .padding(0.1)
+        , valuescale = d3.scaleLinear()
+            .domain([0, d3.max(data, getValue)])
+            .range([chartH, 0])
+        , colorScale = d3.scaleOrdinal(colors);
+        ;
+      console.log(  d3.max(data,getValue))
+      console.log( valuescale(  d3.max(data,getValue)));
+
+      var xAxis = d3.axisBottom().scale(bands);
+      var yAxis = d3.axisLeft().scale(valuescale);
+
+      svg = d3.select(this)
+              .append("svg")
+              .classed("chart", true)
+              .attr('width',width)
+              .attr('height',height)
+              ;
+
+      var container = svg.append("g")
+            .classed("container-group", true)
+            .call(svgMove, margin, margin);
+
+      container.append("g").classed("chart-group", true);
+     
+      container.append("g").classed("x-axis-group axis", true)
+            .transition()
+            .call(svgMove,0,chartH)
+            .call(xAxis);
+      
+      container.append("g").classed("y-axis-group axis", true)
+            .transition()
+            .call(yAxis);
+
+      var bars = svg.select(".chart-group")
+              .selectAll(".bar")
+              .data(data);
+
+      bars.enter().append("rect")
+            .classed("bar", true)
+            .style('fill', (d) => colorScale(getCategory(d)))
+            .attr('x',(d)=>  bands(getCategory(d)))
+            .attr('width', bands.bandwidth())
+            .attr('y',(d)=>valuescale(getValue(d)) )
+            .attr('height',(d)=>chartH-valuescale(getValue(d)) )
+          .append('title')
+            .text((d)=> getCategory(d) +": " + getValue(d) )
+    });
+  }
+
+  exports.category = function(f) { getCategory = f; return this;  } 
+  exports.value = function(f) { getValue = f;   return this; } 
+  exports.width = function(f) { width = f;   return this; } 
+  exports.height = function(f) { height = f;   return this; } 
+
+  return exports;
+}
+
+/*
+function encode_as_img_and_link(){
+ // Add some critical information
+ $("svg").attr({ version: '1.1' , xmlns:"http://www.w3.org/2000/svg"});
+
+ var svg = $("#chart-canvas").html();
+ var b64 = window.btoa(svg); 
+
+ // Works in recent Webkit(Chrome)
+ $("body").append($("<img src='data:image/svg+xml;base64,\n"+b64+"' alt='chrome-file.svg'/>"));
+
+ // Works in Firefox 3.6 and Webit and possibly any browser which supports the data-uri
+ $("body").append($("<a href-lang='image/svg+xml' href='data:image/svg+xml;base64,\n"+b64+"' title='file.svg'>FF/webkit Download</a>"));
+}
+*/
+
+</script>
+</body>
+</html>
+
+<?php # vim: set ts=2 sw=2 et :

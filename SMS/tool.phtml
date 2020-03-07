@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<script
+  src="js/jquery-3.1.0.min.js"
+  integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
+  crossorigin="anonymous"></script>
+
+</head>
+<script>
+$(function(){
+	$('input').next('label').click(function(){
+		var i = $(this).prev();
+		i.prop("checked",!i.prop('checked'));
+		$(this).parents('form').change();
+	});
+
+	//autosave
+	$('form').change(function(){
+		$(this).data('changed',true); 
+		$(this).css('background','#fdd');
+
+	});
+
+	$('.autosubmit').click(function(){
+		var $myform = $(this).closest('form');
+		if ($myform.data('changed')) {
+			$myform.prop('target',$(this).attr('href'));
+			$myform.submit();
+		}
+	});
+
+	$('input.alternative').blur(function(){
+		var value = $(this).val();
+		if (!value) return;
+		var $ul = $(this).parent().find('ul');
+		var $newli = $('li:first-child',$ul).clone();
+		$('input',$newli).val(value);
+		$('label',$newli).text(value);
+	        $ul.prepend($newli);	
+	});
+});
+</script>
+<link href="css/tool.css" rel="stylesheet" type="text/css" />
+<body>
+<?php include "tool_menu.phtml";?>
+<p><em><?=$paper_id?> (<?=$InsertDate?>)</em></p>
+<h1><em><?=$Title?></em></h1>
+<div class="subtitle"><?=$Author?></div>
+
+<?php if ( isset($Attachments)):?>
+<div class="attachment">
+	<?php foreach ($Attachments as $a): ?>
+	<a target="viewer" href="file:///home/monk/.zotero/zotero/o0zx3fdp.default/zotero/storage/<?=$a?>"><?=$a?></a><br />
+	<?php endforeach?>
+</div>
+<?php endif?>
+
+<form id="adatok" method="POST" target="tool.php">
+
+<div class="control">
+<?php if ($paper_prev):?>
+<span class="button autosubmit"><a href="tool.php?paper=<?=$paper_prev?>">Previous</a></span>
+<?php endif ?>
+<input type="reset" value="Reset" />
+<?php if(isset($search)): ?>
+<input type="submit" value="Search" name="list" />
+<?php else: ?>
+<input type="submit" value="Save" />
+<input type="hidden" name="store" value="<?=$paper_id?>"/>
+<?php endif ?>
+<?php if ($paper_next):?>
+<span class="button autosubmit"><a href="tool.php?paper=<?=$paper_next?>">Next</a></span>
+<?php endif ?>
+</div>
+
+<?php if(!isset($search)): ?>
+<fieldset><legend>Cél:</legend>
+<textarea name="Purpose">
+<?=$Purpose?>
+</textarea>
+</fieldset>
+<?php endif?>
+
+<fieldset><legend>Kutatás típusa:</legend>
+<?=$radio('Type')?>
+</fieldset>
+
+<fieldset><legend>Biztonság:</legend>
+<?=$cb('SEC')?>
+</fieldset>
+
+<fieldset><legend>Contribution:</legend>
+<?=$cb('CTR')?>
+</fieldset>
+
+<fieldset><legend>FLOSS Tulajd.:</legend>
+<?=$cb('OSP')?>
+</fieldset>
+
+<fieldset><legend>Jelleg:</legend>
+<?=$radio('Empirical')?>
+</fieldset>
+
+<br clear="both" />
+
+<fieldset><legend>Téma:</legend>
+<?=$radio('Topic')?>
+<input class="alternative" type="text" />
+</fieldset>
+
+<fieldset><legend>Módszer:</legend>
+<?=$cb('MTH')?>
+</fieldset>
+
+<fieldset><legend>Flags:</legend>
+<?=$cb('FLG')?>
+</fieldset>
+
+<br clear="both" />
+
+</form>
+
+</body>
