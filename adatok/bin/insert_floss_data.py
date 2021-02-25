@@ -15,7 +15,7 @@ except:
 
 def strip(x): return x.strip()
 
-vuls = ( list(map(strip, line.split('|'))) for line in open(vul_file) )
+vuls = ([strip(x.replace('"','')) for x in line.split('|')] for line in open(vul_file) )
 
 db = connection.cursor()
 db.execute("DELETE FROM vulnerability;")
