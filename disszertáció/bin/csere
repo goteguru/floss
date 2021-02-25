@@ -6,7 +6,7 @@ if [ "$regexp" == "" ] ; then
 	echo "replace <regexp>"
 fi
 
-for f in F*/*.md *.md Bevezetés/*.md Összefoglalás/*.md; do 
+for f in F*/*.md *.md ; do 
 	sed -ri "$regexp" "$f"
 done
 

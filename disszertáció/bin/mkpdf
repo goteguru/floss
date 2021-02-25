@@ -1,4 +1,4 @@
-pandoc -r markdown+multiline_tables+smart+fenced_divs \
+pandoc -r markdown+multiline_tables+smart+fenced_divs+bracketed_spans \
 	--number-sections \
         --filter pandoc-crossref \
 	--filter pandoc-citeproc \
@@ -7,12 +7,14 @@ pandoc -r markdown+multiline_tables+smart+fenced_divs \
 	-o mg-értekezés.pdf \
 	-s \
 config.md  \
-F0_Bevezetés/*.md \
-F1_Keretek/*.md \
-F2_FOSS_Sajátosságok/*.md \
-F3_FOSS_Biztonsági_Hatásai/*.md \
-F4_Vedelem/*.md \
-F5_Összefoglalás/*.md \
+F1_Bevezetés/*.md \
+F2_Tárgy/*.md \
+F3_Belső_Sajátosságok/*.md \
+F4_Külső_Sajátosságok/*.md \
+F5_Védelmi_Intézkedések/*.md \
+F6_Szabályozás/*.md \
+F7_Összefoglalás/*.md \
+F8_Függelék/*.md \
 	
 exit ###############################
 	--csl nke.csl \

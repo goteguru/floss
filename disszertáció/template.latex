@@ -308,6 +308,14 @@ $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
 $endif$
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+$endif$
 
 \addtokomafont{sectioning}{\rmfamily}
 %%%%%%%%%%%%%%%%%%%%%%%%%% Titlepage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -322,7 +330,7 @@ $endif$
 		\includegraphics[width=40mm]{ábrák/nke-logo-fekete.png}\\[1.8cm]
 		{\large $author$}\\[0.8cm]
 		\Huge\setstretch{1.0}\textbf{$title$}\\[1cm]
-		\large Doktori (PhD) értekezés tervezet\\[3cm]
+		\large Doktori (PhD) értekezés\\[3cm]
 		Témavezetők:\\[0.8cm]
 			\begin{minipage}{0.42\textwidth}
 			\begin{center}

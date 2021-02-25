@@ -39,7 +39,7 @@ for fid, fdesc in con.cursor().execute("SELECT fid, fdesc FROM nist_function"):
                     print(f"**{aid}**|{adesc}|")
                     print(f"| **Keretrendszer:**| {sk} ({','.join(pol[sk])})|")
                     if (vids): 
-                        print(f"| **Vonatkozó problémák:**| {vids} |")
+                        print(f"| **Problémák:**| {vids} |")
                     if (mids): 
                         print(f"| **Javaslatok:**| {mids} |")
                     if (bmids): 

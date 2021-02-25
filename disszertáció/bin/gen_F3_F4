@@ -1,0 +1,72 @@
+#!/bin/bash
+
+#
+# (re)Generate additional results md files 
+#
+
+MYDIR=$(dirname $0)
+FLOSS_DATA_DIR=${FLOSS_DATA_DIR-"$MYDIR/../../adatok/"}
+FLOSS_PUB_DIR=${FLOSS_PUB_DIR-"$MYDIR/../"}
+FLOSS_DB=$FLOSS_DATA_DIR/floss.sqlite
+
+if [ ! -f $FLOSS_DB ]; then
+	echo "$FLOSS_DB not found. Please run db create script (adat/floss)".
+	exit 1
+fi
+
+TARGET_DIR=$FLOSS_PUB_DIR/F3_Belső_Sajátosságok/ 
+
+for code in F J K M ; do
+>$TARGET_DIR/${code}_XTables.md sqlite3 $FLOSS_DB <<SQL
+.separator |
+SELECT ":A *$code* kategóriában azonosított problémák";
+SELECT "";
+SELECT "kód |szint|leírás                                                                            | sajátosság";
+SELECT "---:|:--:|:---------------------------------------------------------------------------------|---------------";
+SELECT * FROM vulnerability WHERE vid LIKE "S$code%";
+SELECT vid,lev,des,"["||sid||"](#sec:"||sid||")" FROM vulnerability WHERE vid LIKE "S$code%";
+SELECT "";
+SELECT ":A *$code* kategóriában azonosított javaslatok";
+SELECT "";
+SELECT "kód |szint|leírás                                                                            | probléma"; 
+SELECT "---:|:--:|:---------------------------------------------------------------------------------|---------------";
+SELECT mid,lev,des,group_concat(vid,', ') FROM mitigation LEFT JOIN m2v using (mid) WHERE mid like 'J$code%' GROUP BY mid;
+SQL
+done
+
+TARGET_DIR=$FLOSS_PUB_DIR/F4_Külső_Sajátosságok/
+
+for code in G H S T ; do
+>$TARGET_DIR/${code}_XTables.md sqlite3 $FLOSS_DB <<SQL
+.separator |
+SELECT ":A *$code* kategóriában azonosított problémák";
+SELECT "";
+SELECT "kód |szint|leírás                                                                            | sajátosság";
+SELECT "---:|:--:|:---------------------------------------------------------------------------------|---------------";
+SELECT vid,lev,des,"["||sid||"](#sec:"||sid||")" FROM vulnerability WHERE vid LIKE "S$code%";
+SELECT "";
+SELECT ":A *$code* kategóriában azonosított javaslatok";
+SELECT "";
+SELECT "kód |szint|leírás                                                                            | probléma"; 
+SELECT "---:|:--:|:---------------------------------------------------------------------------------|---------------";
+SELECT mid,lev,des,group_concat(vid,', ') FROM mitigation LEFT JOIN m2v using (mid) WHERE mid like 'J$code%' GROUP BY mid;
+SQL
+done
+
+# ---------------- Függelék -----------------
+TARGET_DIR=$FLOSS_PUB_DIR/F8_Függelék/
+>$TARGET_DIR/04_CodeTables.md sqlite3 $FLOSS_DB <<SQL
+.separator |
+SELECT "## Sérülékenységek és javaslatok kódtáblázatai";
+SELECT ":Azonosított sérülékenységek";
+SELECT "";
+SELECT "kód |szint|leírás                                                                           ";
+SELECT "---:|:--:|:---------------------------------------------------------------------------------";
+SELECT vid, lev, des FROM vulnerability ORDER BY vid;
+SELECT "";
+SELECT ":Azonosított javaslatok";
+SELECT "";
+SELECT "kód |szint|leírás                                                                        "; 
+SELECT "---:|:--:|:---------------------------------------------------------------------------------";
+SELECT mid,lev,des FROM mitigation WHERE mid not like 'XX%' ORDER BY mid;
+SQL

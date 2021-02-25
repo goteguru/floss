@@ -1,0 +1,1 @@
+egrep --color -i "$*"  *.md */*.md

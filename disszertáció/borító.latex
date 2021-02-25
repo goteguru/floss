@@ -1,0 +1,119 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[12pt,magyar,a4paper,oneside]{scrreprt}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+    \setmainfont[]{TeX Gyre Termes}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Létfontosságú Információs Rendszerelemekben alkalmazott nyílt forráskód és szabad szoftver rendszerszemléletű biztonsági analízise},
+            pdfauthor={Mészáros Gergely},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{epigraph}
+\usepackage{etoolbox}
+\usepackage{array}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{pslatex}
+\usepackage{pdflscape}
+\AtBeginEnvironment{longtable}{\singlespacing}
+\setlength{\extrarowheight}{8pt}
+\pagenumbering{gobble}
+\usepackage{fancyhdr}
+\rhead{\leftmark}
+\raggedbottom
+\widowpenalty=500
+\displaywidowpenalty=50
+\makeatletter
+\@ifpackageloaded{subfig}{}{\usepackage{subfig}}
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\captionsetup[subfloat]{margin=0.5em}
+\AtBeginDocument{%
+\renewcommand*\figurename{Figure}
+\renewcommand*\tablename{Table}
+}
+\AtBeginDocument{%
+\renewcommand*\listfigurename{List of Figures}
+\renewcommand*\listtablename{List of Tables}
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=magyar]{babel}
+\else
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{magyar}
+\fi
+
+\addtokomafont{sectioning}{\rmfamily}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%% CoverPage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\begin{center}
+		\singlespacing
+		\vspace*{7cm}
+		\large\setstretch{1.0}\textbf{Doktori (PhD) értekezés}\\[1cm]
+		\vfill
+		\hfill
+		\begin{minipage}{0.42\textwidth}
+			\begin{center}
+			\large
+			Mészáros Gergely\\
+			2020
+			\end{center}
+		\end{minipage}
+	\end{center}
+	\vspace{1cm}
+	\null
+\end{titlepage}
+\end{document}
